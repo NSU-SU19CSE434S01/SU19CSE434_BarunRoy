@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1200.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="221.0" layoutY="24.0" prefHeight="46.0" prefWidth="484.0" text="     Resume Builder System" textFill="#0ba6e3" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="40.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Label>
+      <Label layoutX="15.0" layoutY="93.0" prefHeight="37.0" prefWidth="175.0" text="Personal Information" textOverrun="LEADING_WORD_ELLIPSIS" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="97.0" layoutY="139.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField layoutX="97.0" layoutY="172.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="17.0" layoutY="143.0" prefHeight="17.0" prefWidth="53.0" text="Name" />
+      <Label layoutX="17.0" layoutY="176.0" prefHeight="17.0" prefWidth="53.0" text="Address" />
+      <Label layoutX="16.0" layoutY="208.0" prefHeight="17.0" prefWidth="47.0" text="Mobile" />
+      <TextField layoutX="97.0" layoutY="204.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="17.0" layoutY="242.0" prefHeight="25.0" prefWidth="53.0" text="E-mail" />
+      <TextField layoutX="96.0" layoutY="242.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="15.0" layoutY="281.0" prefHeight="17.0" prefWidth="85.0" text="Date of Birth" />
+      <TextField layoutX="96.0" layoutY="277.0" prefHeight="25.0" prefWidth="156.0" />
+      <Label layoutX="14.0" layoutY="325.0" prefHeight="26.0" prefWidth="147.0" text="Career Objective" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="13.0" layoutY="359.0" prefHeight="90.0" prefWidth="243.0" promptText="Not more than three lines">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <Label layoutX="17.0" layoutY="459.0" prefHeight="37.0" prefWidth="210.0" text="Educational Qualification" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="503.0" prefHeight="25.0" prefWidth="165.0" text="Graduation Information" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="548.0" prefHeight="17.0" prefWidth="72.0" text="Major" />
+      <Label layoutX="14.0" layoutY="583.0" prefHeight="17.0" prefWidth="72.0" text="Institution" />
+      <Label layoutX="15.0" layoutY="615.0" prefHeight="17.0" prefWidth="115.0" text="Year of Graduation" />
+      <Label layoutX="13.0" layoutY="645.0" prefHeight="37.0" prefWidth="53.0" text="CGPA" />
+      <TextField layoutX="122.0" layoutY="543.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField layoutX="122.0" layoutY="579.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField layoutX="122.0" layoutY="611.0" />
+      <TextField layoutX="122.0" layoutY="650.0" />
+      <Label layoutX="14.0" layoutY="699.0" prefHeight="26.0" prefWidth="185.0" text="A' Level / HSC Information" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="737.0" prefHeight="26.0" prefWidth="72.0" text="Institution" />
+      <Label layoutX="13.0" layoutY="774.0" prefHeight="26.0" prefWidth="101.0" text="Year of Graduation" />
+      <Label layoutX="14.0" layoutY="812.0" prefHeight="37.0" prefWidth="72.0" text="CGPA" />
+      <TextField layoutX="119.0" layoutY="738.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField layoutX="119.0" layoutY="777.0" prefHeight="25.0" prefWidth="156.0" />
+      <TextField layoutX="120.0" layoutY="819.0" prefHeight="26.0" prefWidth="156.0" />
+      <Label layoutX="8.0" layoutY="865.0" prefHeight="37.0" prefWidth="185.0" text="O' Level / SSC Information" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="913.0" prefHeight="26.0" prefWidth="91.0" text="Institution" />
+      <Label layoutX="16.0" layoutY="947.0" prefHeight="26.0" prefWidth="101.0" text="Year of Graduation" />
+      <Label layoutX="16.0" layoutY="981.0" prefHeight="25.0" prefWidth="101.0" text="CGPA" />
+      <TextField layoutX="128.0" layoutY="908.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField layoutX="129.0" layoutY="941.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField layoutX="129.0" layoutY="976.0" prefHeight="26.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>
