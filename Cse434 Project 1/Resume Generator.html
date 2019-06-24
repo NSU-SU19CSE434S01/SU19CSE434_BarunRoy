@@ -24,11 +24,94 @@
     }
 
 
+    p, ul {
+      font-family: 'Sanchez', serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    :root {
+      --yellowish: #eeb14f;
+      --dark-purple: #263547;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
 
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: var(--dark-purple);
+      height: 150px;
+    }
+    
+    .logo {
+      background: url('./rss.png') no-repeat;
+      width: 32px;
+      height: 32px;
+      margin: 20px;
+    }
+    
+    .title-holder {
+      align-items: center;
+    }
+    
+    .nama {
+      color: var(--yellowish);
+      font-family: 'Montserrat', serif;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: bold;
 
+    }
+
+    .designare {
+      color: #ffffff;
+      font-family: 'Sanchez', serif;
+      text-transform: uppercase;
+    }
+    
+    .content-body {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .wrapper {
+      margin: 20px;
+    }
+    
+    .section-left {
+      flex: 1;
+      background-color: var(--yellowish);
+    }
+    
+    .section-left ul {
+      list-style: none;
+      margin-left: -40px;
+      text-transform: capitalize;
+      font-size: 12px;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 0.9em;
+      font-weight: bold;
+      font-family: 'Montserrat', serif;
+      letter-spacing: 2px;
+    }
+    
+   
+    
+    
 
   </style>
-
 
 </head>
 
@@ -49,7 +132,30 @@
       <div class="section-left">
         <div class="wrapper">
           <div class="lists">
-            <h2>professional skills</h2>
+            <h2>Personal Information</h2>
+            <p> Address: </p>
+            <p> Mobile: </p>
+            <p> Email: </p>
+            <p> Dateof Birth: </p>
+          </div>
+
+
+          <div class="lists">
+            <h2>Personal Skills</h2>
+            <ul>
+              <li>Ambitious and Hard working</li>
+              <li>Reliable and Professional</li>
+              <li>Self-motivated</li>
+              <li>Positive thinker</li>
+              <li>Team player</li>
+              <li>Fast learner</li>
+              <li>Good Communication skills</li>
+            </ul>
+          </div>
+
+
+    
+            <h2>Professional Skills</h2>
             <ul>
               <li>SEO and Google analytics</li>
               <li>social media strategy</li>
@@ -63,12 +169,23 @@
               <li>market research</li>
             </ul>
           </div>
+                 
+</div> <!-- end wrapper -->
+      </div> <!-- end section-left -->
+
+
+
+          
+
+
+          
 
 
 
 
 
 
+<div style="margin-top:500px;"></div>
 	                   
 </body>
 </html>
