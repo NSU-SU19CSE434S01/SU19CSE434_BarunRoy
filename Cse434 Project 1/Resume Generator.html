@@ -41,12 +41,11 @@
       background-color: var(--dark-purple);
       height: 150px;
     }
-    .logo {
-      /*background: url('./rss.png') no-repeat;*/
-      width: 32px;
-      height: 32px;
-      margin: 20px;
+  
+    img.avatar {
+    width: 130px;
     }
+
     .title-holder {
       align-items: center;
     }
@@ -56,11 +55,13 @@
       text-transform: uppercase;
       font-size: 36px;
       font-weight: bold;
+      margin:  20px;
     }
     .designare {
       color: #ffffff;
       font-family: 'Sanchez', serif;
       text-transform: uppercase;
+      margin:20px;
     }
     .content-body {
       display: flex;
@@ -128,7 +129,9 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo"></div>
+      <div>
+        <div><img src="Photo.jpg" alt="avatar" class="avatar"></div>
+      </div>
       <div class="title-holder">
         <div class="name">Barun Roy</div>
         <div class="designare">Social Media Manager</div>
