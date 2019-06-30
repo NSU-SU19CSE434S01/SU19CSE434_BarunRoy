@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1200.0" prefWidth="1000.0" style="-fx-background-color: Lightgrey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane prefHeight="1000.0" prefWidth="1600.0" style="-fx-background-color: Lightgrey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Label layoutX="221.0" layoutY="13.0" prefHeight="46.0" prefWidth="484.0" text="     Resume Builder System" textFill="#0ba6e3" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+      <Label layoutX="501.0" layoutY="13.0" prefHeight="46.0" prefWidth="493.0" text="     Resume Builder System" textFill="#0ba6e3" textOverrun="CENTER_ELLIPSIS" wrapText="true">
          <font>
             <Font name="Calibri Bold" size="40.0" />
          </font>
@@ -23,7 +23,7 @@
          </font>
       </Label>
       <TextField fx:id="name" layoutX="97.0" layoutY="139.0" prefHeight="25.0" prefWidth="156.0" promptText="Enter your full name" />
-      <TextField fx:id="address" layoutX="97.0" layoutY="172.0" prefHeight="25.0" prefWidth="156.0" promptText="Enter your full address" />
+      <TextField fx:id="address" layoutX="96.0" layoutY="173.0" prefHeight="25.0" prefWidth="156.0" promptText="Enter your full address" />
       <Label layoutX="17.0" layoutY="143.0" prefHeight="17.0" prefWidth="53.0" style="-fx-padding: 5px;" text="Name" />
       <Label layoutX="17.0" layoutY="176.0" prefHeight="17.0" prefWidth="53.0" style="-fx-padding: 5px;" text="Address" />
       <Label layoutX="16.0" layoutY="208.0" prefHeight="17.0" prefWidth="47.0" style="-fx-padding: 5px;" text="Mobile" />
@@ -37,7 +37,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="24.0" layoutY="375.0" prefHeight="85.0" prefWidth="255.0" promptText="Not more than three lines" style="-fx-padding: 5px;">
+      <TextField layoutX="24.0" layoutY="375.0" prefHeight="57.0" prefWidth="226.0" promptText="Not more than three lines" style="-fx-padding: 5px;">
          <font>
             <Font size="17.0" />
          </font>
@@ -82,28 +82,82 @@
       <TextField layoutX="432.0" layoutY="619.0" prefHeight="26.0" prefWidth="149.0" />
       <TextField layoutX="432.0" layoutY="658.0" prefHeight="25.0" prefWidth="149.0" />
       <TextField layoutX="432.0" layoutY="696.0" prefHeight="26.0" prefWidth="149.0" promptText="on a scale of 5" />
-      <Button fx:id="Generate" layoutX="411.0" layoutY="779.0" mnemonicParsing="false" onAction="#press" prefHeight="25.0" prefWidth="147.0" text="Generate CV" />
+      <Button fx:id="Generate" layoutX="1277.0" layoutY="339.0" mnemonicParsing="false" onAction="#press" prefHeight="69.0" prefWidth="269.0" style="-fx-background-color: Lightblue;" text="Generate Resume">
+         <font>
+            <Font size="29.0" />
+         </font></Button>
       <Label layoutX="327.0" layoutY="371.0" prefHeight="26.0" prefWidth="108.0" text="A' Level or HSC ?" />
       <TextField layoutX="440.0" layoutY="436.0" prefHeight="26.0" prefWidth="149.0" />
       <Label layoutX="324.0" layoutY="582.0" prefHeight="37.0" prefWidth="115.0" text="O' Level or SSC ?" />
       <TextField layoutX="432.0" layoutY="582.0" prefHeight="26.0" prefWidth="149.0" />
-      <Label layoutX="22.0" layoutY="477.0" prefHeight="46.0" prefWidth="156.0" style="-fx-padding: 10px;" text="Personal Skills" underline="true">
+      <Label layoutX="22.0" layoutY="443.0" prefHeight="46.0" prefWidth="156.0" style="-fx-padding: 10px;" text="Personal Skills" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="26.0" layoutY="533.0" prefHeight="85.0" prefWidth="255.0" />
-      <Label layoutX="22.0" layoutY="635.0" prefHeight="46.0" prefWidth="178.0" style="-fx-padding: 10px;" text="Professional Skills" underline="true">
+      <TextField layoutX="26.0" layoutY="490.0" prefHeight="27.0" prefWidth="101.0" />
+      <Label layoutX="22.0" layoutY="613.0" prefHeight="46.0" prefWidth="180.0" style="-fx-padding: 10px;" text="Professional Skills" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="26.0" layoutY="694.0" prefHeight="85.0" prefWidth="255.0" />
-      <Label layoutX="645.0" layoutY="75.0" prefHeight="57.0" prefWidth="156.0" style="-fx-padding: 10px;" text="Work Experience" underline="true">
+      <Label layoutX="652.0" layoutY="75.0" prefHeight="57.0" prefWidth="168.0" style="-fx-padding: 10px;" text="Work Experience" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="652.0" layoutY="131.0" prefHeight="94.0" prefWidth="255.0" />
+      <TextField layoutX="659.0" layoutY="135.0" prefHeight="75.0" prefWidth="248.0" />
+      <TextField layoutX="150.0" layoutY="491.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="26.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="150.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="27.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="150.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="160.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="26.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="26.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="160.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="26.0" layoutY="745.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="160.0" layoutY="745.0" prefHeight="27.0" prefWidth="101.0" />
+      <Label layoutX="652.0" layoutY="225.0" prefHeight="46.0" prefWidth="149.0" style="-fx-padding: 10px;" text="Achievements" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="661.0" layoutY="276.0" prefHeight="75.0" prefWidth="248.0" />
+      <Label layoutX="652.0" layoutY="373.0" prefHeight="57.0" prefWidth="261.0" style="-fx-padding: 10px;" text="Co-Extracurricular Activities" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="662.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField layoutX="790.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" />
+      <Label layoutX="662.0" layoutY="483.0" prefHeight="57.0" prefWidth="248.0" style="-fx-padding: 10px;" text="Computer Expertise" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="662.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField layoutX="795.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" />
+      <Label layoutX="659.0" layoutY="591.0" prefHeight="57.0" prefWidth="197.0" style="-fx-padding: 10px;" text="Personal Assessment" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="666.0" layoutY="659.0" prefHeight="57.0" prefWidth="248.0" />
+      <Label layoutX="985.0" layoutY="389.0" prefHeight="57.0" prefWidth="178.0" style="-fx-padding: 10px;" text="References" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="977.0" layoutY="469.0" prefHeight="37.0" prefWidth="218.0" />
+      <TextField layoutX="978.0" layoutY="533.0" prefHeight="37.0" prefWidth="218.0" />
+      <Label layoutX="985.0" layoutY="78.0" prefHeight="57.0" prefWidth="248.0" style="-fx-padding: 10px;" text="Insert Passport Size Picture" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
    </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
 </AnchorPane>

@@ -16,7 +16,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/Main.fxml"));
-			Scene scene = new Scene(root,600,700);
+			Scene scene = new Scene(root,800,800);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("Resume Builder System");
 			primaryStage.setScene(scene);
