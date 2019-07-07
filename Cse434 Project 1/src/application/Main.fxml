@@ -37,7 +37,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="24.0" layoutY="375.0" prefHeight="57.0" prefWidth="226.0" promptText="Not more than three lines" style="-fx-padding: 5px;">
+      <TextField fx:id="careerobjective" layoutX="24.0" layoutY="375.0" prefHeight="57.0" prefWidth="226.0" promptText="Not more than three lines" style="-fx-padding: 5px;">
          <font>
             <Font size="17.0" />
          </font>
@@ -95,7 +95,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="26.0" layoutY="490.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 1" />
+      <TextField fx:id="personalskills1" layoutX="26.0" layoutY="490.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 1" />
       <Label layoutX="22.0" layoutY="613.0" prefHeight="46.0" prefWidth="180.0" style="-fx-padding: 10px;" text="Professional Skills" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
@@ -107,11 +107,11 @@
          </font>
       </Label>
       <TextField layoutX="662.0" layoutY="128.0" prefHeight="37.0" prefWidth="248.0" promptText="1. " />
-      <TextField layoutX="150.0" layoutY="491.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 2" />
-      <TextField layoutX="26.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 3" />
-      <TextField layoutX="150.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 4" />
-      <TextField layoutX="27.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 5" />
-      <TextField layoutX="150.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 6" />
+      <TextField fx:id="personalskills2" layoutX="150.0" layoutY="491.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 2" />
+      <TextField fx:id="personalskills3" layoutX="26.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 3" />
+      <TextField fx:id="personalskills4" layoutX="150.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 4" />
+      <TextField fx:id="personalskills5" layoutX="27.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 5" />
+      <TextField fx:id="personalskills6" layoutX="150.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 6" />
       <TextField layoutX="160.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 2" />
       <TextField layoutX="26.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 3" />
       <TextField layoutX="26.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 1" />

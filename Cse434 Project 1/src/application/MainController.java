@@ -26,10 +26,31 @@ public class MainController implements EventHandler<ActionEvent> {
 	public TextField dateofbirth;
 	
 	@FXML
+	public TextField careerobjective;
+	
+	@FXML
+	public TextField personalskills1;
+	
+	@FXML
+	public TextField personalskills2;
+	
+	@FXML
+	public TextField personalskills3;
+	
+	@FXML
+	public TextField personalskills4;
+	
+	@FXML
+	public TextField personalskills5;
+	
+	@FXML
+	public TextField personalskills6;
+	
+	@FXML
 	public Button Generate;
 	
 	@FXML
-	String na,ad,mo,em,da;
+	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6;
 	
 	public void press(ActionEvent args) {
 		Generate.setOnAction(this);		
@@ -47,6 +68,16 @@ public class MainController implements EventHandler<ActionEvent> {
 			String mo=mobile.getText();
 			String em=email.getText();
 			String da=dateofbirth.getText();
+			
+			String ca=careerobjective.getText();
+			
+			String pe1=personalskills1.getText();
+			String pe2=personalskills2.getText();
+			String pe3=personalskills3.getText();
+			String pe4=personalskills4.getText();
+			String pe5=personalskills5.getText();
+			String pe6=personalskills6.getText();
+
 			
 			String filename="Resume Generator.html";
 			
@@ -232,12 +263,12 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"lists\">\r\n" + 
 						"            <h2>Personal Skills</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Ambitious and Hard working</li>\r\n" + 
-						"              <li>Reliable and Professional</li>\r\n" + 
-						"              <li>Positive thinker</li>\r\n" + 
-						"              <li>Team player</li>\r\n" + 
-						"              <li>Fast learner</li>\r\n" + 
-						"              <li>Good Communication skills</li>\r\n" + 
+						"              <li>"+pe1+"</li>\r\n" + 
+						"              <li>"+pe2+"</li>\r\n" + 
+						"              <li>"+pe3+"</li>\r\n" + 
+						"              <li>"+pe4+"</li>\r\n" + 
+						"              <li>"+pe5+"</li>\r\n" + 
+						"              <li>"+pe6+"</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
@@ -270,7 +301,7 @@ public class MainController implements EventHandler<ActionEvent> {
 						"        <div class=\"wrapper\">\r\n" + 
 						"          <div class=\"content\">\r\n" + 
 						"            <h2>Career Objective</h2>\r\n" + 
-						"            <p>To work in a pragmatic way in an organization where I can show my talent and enhance my skills to meet company goals and objectives with full integrity and passion.</p>\r\n" + 
+						"            <p>"+ca+"</p>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
 						"          <div class=\"content\">\r\n" + 
