@@ -210,7 +210,7 @@ public class MainController implements EventHandler<ActionEvent> {
 						"        <div><img src=\"Photo.jpg\" alt=\"avatar\" class=\"avatar\"></div>\r\n" + 
 						"      </div>\r\n" + 
 						"      <div class=\"title-holder\">\r\n" + 
-						"        <div class=\"name\">Barun Roy</div>\r\n" + 
+						"        <div class=\"name\">"+na+"</div>\r\n" + 
 						"      </div>\r\n" + 
 						"    </div> <!-- end header -->\r\n" + 
 						"\r\n" + 
@@ -221,10 +221,10 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"lists\">\r\n" + 
 						"            <h2>Personal Information</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"               <li> Address: </li>\r\n" + 
-						"               <li> Mobile: </li>\r\n" + 
-						"               <li> Email: </li>\r\n" + 
-						"               <li> Dateof Birth: </li>\r\n" + 
+						"               <li> Address: "+ad+" </li>\r\n" + 
+						"               <li> Mobile: "+mo+" </li>\r\n" + 
+						"               <li> Email: "+em+" </li>\r\n" + 
+						"               <li> Date of Birth: "+da+" </li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 

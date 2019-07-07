@@ -82,7 +82,7 @@
       <TextField layoutX="432.0" layoutY="619.0" prefHeight="26.0" prefWidth="149.0" />
       <TextField layoutX="432.0" layoutY="658.0" prefHeight="25.0" prefWidth="149.0" />
       <TextField layoutX="432.0" layoutY="696.0" prefHeight="26.0" prefWidth="149.0" promptText="on a scale of 5" />
-      <Button fx:id="Generate" layoutX="1277.0" layoutY="339.0" mnemonicParsing="false" onAction="#press" prefHeight="69.0" prefWidth="269.0" style="-fx-background-color: Lightblue;" text="Generate Resume">
+      <Button fx:id="Generate" layoutX="1049.0" layoutY="657.0" mnemonicParsing="false" onAction="#press" prefHeight="57.0" prefWidth="456.0" style="-fx-background-color: Lightblue;" text="Click Here To Generate Resume">
          <font>
             <Font size="29.0" />
          </font></Button>
