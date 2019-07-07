@@ -95,7 +95,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="26.0" layoutY="490.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="26.0" layoutY="490.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 1" />
       <Label layoutX="22.0" layoutY="613.0" prefHeight="46.0" prefWidth="180.0" style="-fx-padding: 10px;" text="Professional Skills" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
@@ -106,38 +106,38 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="659.0" layoutY="135.0" prefHeight="75.0" prefWidth="248.0" />
-      <TextField layoutX="150.0" layoutY="491.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="26.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="150.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="27.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="150.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="160.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="26.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="26.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="160.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="26.0" layoutY="745.0" prefHeight="27.0" prefWidth="101.0" />
-      <TextField layoutX="160.0" layoutY="745.0" prefHeight="27.0" prefWidth="101.0" />
+      <TextField layoutX="662.0" layoutY="128.0" prefHeight="37.0" prefWidth="248.0" promptText="1. " />
+      <TextField layoutX="150.0" layoutY="491.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 2" />
+      <TextField layoutX="26.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 3" />
+      <TextField layoutX="150.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 4" />
+      <TextField layoutX="27.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 5" />
+      <TextField layoutX="150.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 6" />
+      <TextField layoutX="160.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 2" />
+      <TextField layoutX="26.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 3" />
+      <TextField layoutX="26.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 1" />
+      <TextField layoutX="160.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 4" />
+      <TextField layoutX="26.0" layoutY="745.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 5" />
+      <TextField layoutX="160.0" layoutY="745.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill6" />
       <Label layoutX="652.0" layoutY="225.0" prefHeight="46.0" prefWidth="149.0" style="-fx-padding: 10px;" text="Achievements" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="661.0" layoutY="276.0" prefHeight="75.0" prefWidth="248.0" />
+      <TextField layoutX="659.0" layoutY="274.0" prefHeight="37.0" prefWidth="248.0" promptText="1." />
       <Label layoutX="652.0" layoutY="373.0" prefHeight="57.0" prefWidth="261.0" style="-fx-padding: 10px;" text="Co-Extracurricular Activities" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="662.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" />
-      <TextField layoutX="790.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField layoutX="662.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" promptText="1" />
+      <TextField layoutX="790.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" promptText="2" />
       <Label layoutX="662.0" layoutY="483.0" prefHeight="57.0" prefWidth="248.0" style="-fx-padding: 10px;" text="Computer Expertise" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="662.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" />
-      <TextField layoutX="795.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField layoutX="662.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" promptText="1" />
+      <TextField layoutX="795.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" promptText="2" />
       <Label layoutX="659.0" layoutY="591.0" prefHeight="57.0" prefWidth="197.0" style="-fx-padding: 10px;" text="Personal Assessment" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
@@ -149,13 +149,15 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="977.0" layoutY="469.0" prefHeight="37.0" prefWidth="218.0" />
-      <TextField layoutX="978.0" layoutY="533.0" prefHeight="37.0" prefWidth="218.0" />
+      <TextField layoutX="977.0" layoutY="469.0" prefHeight="37.0" prefWidth="218.0" promptText="Reference 1" />
+      <TextField layoutX="978.0" layoutY="533.0" prefHeight="37.0" prefWidth="218.0" promptText="Reference 2" />
       <Label layoutX="985.0" layoutY="78.0" prefHeight="57.0" prefWidth="248.0" style="-fx-padding: 10px;" text="Insert Passport Size Picture" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
+      <TextField layoutX="661.0" layoutY="177.0" prefHeight="37.0" prefWidth="248.0" promptText="2." />
+      <TextField layoutX="659.0" layoutY="333.0" prefHeight="37.0" prefWidth="248.0" promptText="2." />
    </children>
    <effect>
       <ColorAdjust />
