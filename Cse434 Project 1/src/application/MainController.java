@@ -57,7 +57,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	public Button Generate;
 	
 	@FXML
-	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6;
+	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6;
 	
 	public void press(ActionEvent args) {
 		Generate.setOnAction(this);		
@@ -85,8 +85,15 @@ public class MainController implements EventHandler<ActionEvent> {
 			String pe4=personalskills4.getText();
 			String pe5=personalskills5.getText();
 			String pe6=personalskills6.getText();
-
 			
+			String pr1=professionalskills1.getText();
+			String pr2=professionalskills2.getText();
+			String pr3=professionalskills3.getText();
+			String pr4=professionalskills4.getText();
+			String pr5=professionalskills5.getText();
+			String pr6=professionalskills6.getText();
+
+		
 			String filename="Resume Generator.html";
 			
 			try {
@@ -284,12 +291,12 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"lists\">\r\n" + 
 						"            <h2>Professional Skills</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>SEO and Google analytics</li>\r\n" + 
-						"              <li>social media strategy</li>\r\n" + 
-						"              <li>marketing</li>\r\n" + 
-						"              <li>web content developer</li>\r\n" + 
-						"              <li>corporate blogging</li>\r\n" + 
-						"              <li>photo editing</li>\r\n" + 
+						"              <li>"+pr1+"</li>\r\n" + 
+						"              <li>"+pr2+"</li>\r\n" + 
+						"              <li>"+pr3+"</li>\r\n" + 
+						"              <li>"+pr4+"</li>\r\n" + 
+						"              <li>"+pr5+"</li>\r\n" + 
+						"              <li>"+pr6+"</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
