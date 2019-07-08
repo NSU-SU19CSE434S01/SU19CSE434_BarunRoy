@@ -15,13 +15,10 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	@FXML
 	public TextField address;
-	
 	@FXML
 	public TextField mobile;
-	
 	@FXML
 	public TextField email;
-	
 	@FXML
 	public TextField dateofbirth;
 	
@@ -30,21 +27,31 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	@FXML
 	public TextField personalskills1;
-	
 	@FXML
 	public TextField personalskills2;
-	
 	@FXML
 	public TextField personalskills3;
-	
 	@FXML
 	public TextField personalskills4;
-	
 	@FXML
 	public TextField personalskills5;
-	
 	@FXML
 	public TextField personalskills6;
+	
+	@FXML
+	public TextField professionalskills1;
+	@FXML
+	public TextField professionalskills2;
+	@FXML
+	public TextField professionalskills3;
+	@FXML
+	public TextField professionalskills4;
+	@FXML
+	public TextField professionalskills5;
+	@FXML
+	public TextField professionalskills6;
+	
+	
 	
 	@FXML
 	public Button Generate;
@@ -64,6 +71,7 @@ public class MainController implements EventHandler<ActionEvent> {
 		if(args.getSource()==Generate) {
 			
 			String na=name.getText();
+			
 			String ad=address.getText();
 			String mo=mobile.getText();
 			String em=email.getText();
