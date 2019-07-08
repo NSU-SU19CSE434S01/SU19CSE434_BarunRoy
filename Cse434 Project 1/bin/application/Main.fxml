@@ -56,10 +56,10 @@
       <Label layoutX="329.0" layoutY="196.0" prefHeight="25.0" prefWidth="72.0" text="Institution" />
       <Label layoutX="329.0" layoutY="234.0" prefHeight="17.0" prefWidth="108.0" text="Year of Graduation" />
       <Label layoutX="328.0" layoutY="268.0" prefHeight="27.0" prefWidth="53.0" text="CGPA" />
-      <TextField layoutX="440.0" layoutY="163.0" prefHeight="26.0" prefWidth="149.0" />
-      <TextField layoutX="440.0" layoutY="195.0" prefHeight="26.0" prefWidth="149.0" />
-      <TextField layoutX="440.0" layoutY="230.0" />
-      <TextField layoutX="440.0" layoutY="268.0" prefHeight="26.0" prefWidth="149.0" promptText="on a scale of 4" />
+      <TextField fx:id="major" layoutX="440.0" layoutY="163.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="institution1" layoutX="440.0" layoutY="195.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="yearofgraduation1" layoutX="440.0" layoutY="230.0" />
+      <TextField fx:id="cgpa1" layoutX="440.0" layoutY="268.0" prefHeight="26.0" prefWidth="149.0" promptText="on a scale of 4" />
       <Label layoutX="329.0" layoutY="325.0" prefHeight="26.0" prefWidth="185.0" text="A' Level / HSC Information" underline="true">
          <font>
             <Font size="15.0" />

@@ -51,13 +51,26 @@ public class MainController implements EventHandler<ActionEvent> {
 	@FXML
 	public TextField professionalskills6;
 	
+	/*Graduation Information*/
+	
+	@FXML
+	public TextField major;
+	@FXML
+	public TextField institution1;
+	@FXML
+	public TextField yearofgraduation1;
+	@FXML
+	public TextField cgpa1;
+	
+	
+	
 	
 	
 	@FXML
 	public Button Generate;
 	
 	@FXML
-	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6;
+	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1;
 	
 	public void press(ActionEvent args) {
 		Generate.setOnAction(this);		
@@ -92,6 +105,14 @@ public class MainController implements EventHandler<ActionEvent> {
 			String pr4=professionalskills4.getText();
 			String pr5=professionalskills5.getText();
 			String pr6=professionalskills6.getText();
+			
+			/*Graduation Information*/
+			
+			String ma=major.getText();
+			String in1=institution1.getText();
+			String ye1=yearofgraduation1.getText();
+			String cg1=cgpa1.getText();
+			
 
 		
 			String filename="Resume Generator.html";
