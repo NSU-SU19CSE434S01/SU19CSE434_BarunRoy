@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
@@ -65,7 +67,6 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	
-	
 	@FXML
 	public Button Generate;
 	
@@ -73,13 +74,15 @@ public class MainController implements EventHandler<ActionEvent> {
 	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1;
 	
 	public void press(ActionEvent args) {
-		Generate.setOnAction(this);		
+		Generate.setOnAction(this);
+		
 	}
-
+	
 	
 	@Override
 	public void handle(ActionEvent args) {
 		// TODO Auto-generated method stub
+				
 				
 		if(args.getSource()==Generate) {
 			
@@ -116,6 +119,11 @@ public class MainController implements EventHandler<ActionEvent> {
 
 		
 			String filename="Resume Generator.html";
+			
+			Boolean bo = validateTextFields();
+			
+			if(bo.equals(true)){
+				
 			
 			try {
 				PrintWriter outputStream = new PrintWriter(filename);
@@ -441,14 +449,31 @@ public class MainController implements EventHandler<ActionEvent> {
 				e.printStackTrace();
 			}
 			
+			}
 			
-		
+			else {
+				System.out.println("Cannot be generated");
+			}
 			
 					
-			
-			
 		}
 		
+	}
+	
+	private boolean validateTextFields() {
+		if(name.getText().isEmpty() || address.getText().isEmpty() || mobile.getText().isEmpty() || email.getText().isEmpty() || dateofbirth.getText().isEmpty()) {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Fields");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter into all the TextFields under Personal Information.");
+			alert.showAndWait();
+			
+			return false;
+							
+		}
+		
+		return true;
 	}
 	
 
