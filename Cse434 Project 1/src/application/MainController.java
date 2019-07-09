@@ -345,10 +345,10 @@ public class MainController implements EventHandler<ActionEvent> {
 						"\r\n" + 
 						"            <h3>Graduation Information</h3>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Major:</li>\r\n" + 
-						"              <li>Institution:</li>\r\n" + 
-						"              <li>Year of Graduation:</li>\r\n" + 
-						"              <li>CGPA: on a scale of 4</li>\r\n" + 
+						"              <li>Major: "+ma+"</li>\r\n" + 
+						"              <li>Institution:"+in1+"</li>\r\n" + 
+						"              <li>Year of Graduation: "+ye1+"</li>\r\n" + 
+						"              <li>CGPA: "+cg1+" on a scale of 4</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"\r\n" + 
 						"\r\n" + 
