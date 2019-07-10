@@ -68,9 +68,9 @@
       <Label layoutX="326.0" layoutY="404.0" prefHeight="26.0" prefWidth="92.0" text="Institution" />
       <Label layoutX="322.0" layoutY="430.0" prefHeight="37.0" prefWidth="147.0" text="Year of Graduation" />
       <Label layoutX="326.0" layoutY="474.0" prefHeight="26.0" prefWidth="85.0" text="CGPA" />
-      <TextField layoutX="440.0" layoutY="404.0" prefHeight="26.0" prefWidth="149.0" />
-      <TextField layoutX="441.0" layoutY="371.0" prefHeight="26.0" prefWidth="147.0" />
-      <TextField layoutX="440.0" layoutY="474.0" prefHeight="26.0" prefWidth="149.0" promptText="on a scale of 5" />
+      <TextField fx:id="institution2" layoutX="440.0" layoutY="404.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="alevelorhsc" layoutX="441.0" layoutY="371.0" prefHeight="26.0" prefWidth="147.0" />
+      <TextField fx:id="cgpa2" layoutX="440.0" layoutY="474.0" prefHeight="26.0" prefWidth="149.0" promptText="on a scale of 5" />
       <Label layoutX="329.0" layoutY="533.0" prefHeight="37.0" prefWidth="197.0" text="O' Level / SSC Information" underline="true">
          <font>
             <Font size="15.0" />
@@ -87,7 +87,7 @@
             <Font size="29.0" />
          </font></Button>
       <Label layoutX="327.0" layoutY="371.0" prefHeight="26.0" prefWidth="108.0" text="A' Level or HSC ?" />
-      <TextField layoutX="440.0" layoutY="436.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="yearofgraduation2" layoutX="440.0" layoutY="436.0" prefHeight="26.0" prefWidth="149.0" />
       <Label layoutX="324.0" layoutY="582.0" prefHeight="37.0" prefWidth="115.0" text="O' Level or SSC ?" />
       <TextField layoutX="432.0" layoutY="582.0" prefHeight="26.0" prefWidth="149.0" />
       <Label layoutX="22.0" layoutY="443.0" prefHeight="46.0" prefWidth="156.0" style="-fx-padding: 10px;" text="Personal Skills" underline="true">
