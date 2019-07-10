@@ -129,8 +129,17 @@ public class MainController implements EventHandler<ActionEvent> {
 			String ye1=yearofgraduation1.getText();
 			String cg1=cgpa1.getText();
 			
-
-		
+			/*A'Level/HSC Information*/
+			
+			String al=alevelorhsc.getText();
+			String in2=institution2.getText();
+			String ye2=yearofgraduation2.getText();
+			String cg2=cgpa2.getText();
+			
+			
+			
+			
+			
 			String filename="Resume Generator.html";
 			
 			Boolean bo = validateTextFields();
@@ -367,17 +376,17 @@ public class MainController implements EventHandler<ActionEvent> {
 						"            <h3>Graduation Information</h3>\r\n" + 
 						"            <ul>\r\n" + 
 						"              <li>Major: "+ma+"</li>\r\n" + 
-						"              <li>Institution:"+in1+"</li>\r\n" + 
+						"              <li>Institution: "+in1+"</li>\r\n" + 
 						"              <li>Year of Graduation: "+ye1+"</li>\r\n" + 
 						"              <li>CGPA: "+cg1+" on a scale of 4</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"\r\n" + 
 						"\r\n" + 
-						"            <h3>A'Level/HSC Information</h3>\r\n" + 
+						"            <h3>"+al+" Information</h3>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Institution:</li>\r\n" + 
-						"              <li>Year of Graduation:</li>\r\n" + 
-						"              <li>CGPA: on a scale of 5</li>\r\n" + 
+						"              <li>Institution: "+in2+"</li>\r\n" + 
+						"              <li>Year of Graduation: "+ye2+"</li>\r\n" + 
+						"              <li>CGPA: "+cg2+" on a scale of 5</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"\r\n" + 
 						"\r\n" + 
