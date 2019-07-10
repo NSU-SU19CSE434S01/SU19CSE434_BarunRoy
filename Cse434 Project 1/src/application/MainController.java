@@ -146,7 +146,12 @@ public class MainController implements EventHandler<ActionEvent> {
 			String ye2=yearofgraduation2.getText();
 			String cg2=cgpa2.getText();
 			
+			/*O'Level/SSC Information*/
 			
+			String ol=olevelorssc.getText();
+			String in3=institution3.getText();
+			String ye3=yearofgraduation3.getText();
+			String cg3=cgpa3.getText();
 			
 			
 			
@@ -400,11 +405,11 @@ public class MainController implements EventHandler<ActionEvent> {
 						"            </ul>\r\n" + 
 						"\r\n" + 
 						"\r\n" + 
-						"            <h3>O'Level/SSC Information</h3>\r\n" + 
+						"            <h3>"+ol+" Information</h3>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Institution:</li>\r\n" + 
-						"              <li>Year of Graduation:</li>\r\n" + 
-						"              <li>CGPA: on a scale of 5</li>\r\n" + 
+						"              <li>Institution: "+in3+"</li>\r\n" + 
+						"              <li>Year of Graduation: "+ye3+"</li>\r\n" + 
+						"              <li>CGPA:"+cg3+" on a scale of 5</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
