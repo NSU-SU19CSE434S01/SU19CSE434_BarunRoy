@@ -164,6 +164,13 @@ public class MainController implements EventHandler<ActionEvent> {
 			String ye3=yearofgraduation3.getText();
 			String cg3=cgpa3.getText();
 			
+            /*Work Experience*/
+			
+			String de=designation.getText();
+			String co=companyname.getText();
+			String wo=workdone.getText();
+
+			
 			
 			
 			
