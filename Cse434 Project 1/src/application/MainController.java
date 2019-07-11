@@ -152,6 +152,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			String pr5=professionalskills5.getText();
 			String pr6=professionalskills6.getText();
 			
+			
 			/*Graduation Information*/
 			
 			String ma=major.getText();
@@ -173,16 +174,19 @@ public class MainController implements EventHandler<ActionEvent> {
 			String ye3=yearofgraduation3.getText();
 			String cg3=cgpa3.getText();
 			
-            /*Work Experience*/
+            
+			/*Work Experience*/
 			
 			String de=designation.getText();
 			String co=companyname.getText();
 			String wo=workdone.getText();
 			
 			
+            /*Achievements*/
+			
+			String ac1=achievements1.getText();
+			String ac2=achievements2.getText();
 
-			
-			
 			
 			
 			
@@ -459,8 +463,8 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"content\">\r\n" + 
 						"            <h2>Achievements</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Successful participant of Independence Day Quiz Competition 2009 by YWSS</li>\r\n" + 
-						"              <li>Received 25% scholarship for 12 semesters from NSU</li>\r\n" + 
+						"              <li>"+ac1+"</li>\r\n" + 
+						"              <li>"+ac2+"</li>\r\n" + 
 						"            </ul>   \r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
