@@ -106,12 +106,12 @@ public class MainController implements EventHandler<ActionEvent> {
 	public TextField achievements2;
 	
 	
-    /*Co-Extracurricular Activities*/
+    /*CO-Extracurricular Activities*/
 	
 	@FXML
-	public TextField CoExtracurricularActivities1 ;
+	public TextField coextracurricularactivities1 ;
 	@FXML
-	public TextField CoExtracurricularActivities2;
+	public TextField coextracurricularactivities2;
 	
 	
 	
@@ -195,6 +195,14 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			String ac1=achievements1.getText();
 			String ac2=achievements2.getText();
+			
+            
+			/*Co-Extracurricular Activities*/
+			
+			String coe1=coextracurricularactivities1.getText();
+			String coe2=coextracurricularactivities2.getText();
+			
+			
 
 			
 			
@@ -426,7 +434,7 @@ public class MainController implements EventHandler<ActionEvent> {
 						"        <div class=\"wrapper\">\r\n" + 
 						"          <div class=\"content\">\r\n" + 
 						"            <h2>Career Objective</h2>\r\n" + 
-						"            <p></p>\r\n" + 
+						"            <p>"+ca+"</p>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
 						"          <div class=\"content\">\r\n" + 
@@ -480,9 +488,8 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"content\">\r\n" + 
 						"            <h2>Co-Extracurricular Activities</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Executive body member of MLIS Community Service Club</li>\r\n" + 
-						"              <li>Senior member of MLIS Drama Club</li>\r\n" + 
-						"              <li>Sub-Executive body member of NSU Computer and Engineering Club</li>\r\n" + 
+						"              <li>"+coe1+"</li>\r\n" +  
+						"              <li>"+coe2+"</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 

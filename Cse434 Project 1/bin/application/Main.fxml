@@ -129,8 +129,8 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="662.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" promptText="1" />
-      <TextField layoutX="811.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" promptText="2" />
+      <TextField fx:id="coextracurricularactivities1" layoutX="662.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" promptText="1" />
+      <TextField fx:id="coextracurricularactivities2" layoutX="811.0" layoutY="437.0" prefHeight="25.0" prefWidth="115.0" promptText="2" />
       <Label layoutX="662.0" layoutY="483.0" prefHeight="57.0" prefWidth="248.0" style="-fx-padding: 10px;" text="Computer Expertise" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
