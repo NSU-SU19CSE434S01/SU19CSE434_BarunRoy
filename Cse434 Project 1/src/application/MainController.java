@@ -88,13 +88,24 @@ public class MainController implements EventHandler<ActionEvent> {
 	@FXML
 	public TextField cgpa3;
 	
+	/*Work Experience*/
+	
+	@FXML
+	public TextField designation;
+	@FXML
+	public TextField companyname;
+	@FXML
+	public TextField workdone;
+	
+	
+
 	
 	
 	@FXML
 	public Button Generate;
 	
 	@FXML
-	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3;
+	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo;
 	
 	public void press(ActionEvent args) {
 		Generate.setOnAction(this);
@@ -152,6 +163,8 @@ public class MainController implements EventHandler<ActionEvent> {
 			String in3=institution3.getText();
 			String ye3=yearofgraduation3.getText();
 			String cg3=cgpa3.getText();
+			
+			
 			
 			
 			
@@ -382,7 +395,7 @@ public class MainController implements EventHandler<ActionEvent> {
 						"        <div class=\"wrapper\">\r\n" + 
 						"          <div class=\"content\">\r\n" + 
 						"            <h2>Career Objective</h2>\r\n" + 
-						"            <p>"+ca+"</p>\r\n" + 
+						"            <p></p>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
 						"          <div class=\"content\">\r\n" + 
@@ -399,8 +412,8 @@ public class MainController implements EventHandler<ActionEvent> {
 						"\r\n" + 
 						"            <h3>"+al+" Information</h3>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Institution: "+in2+"</li>\r\n" + 
-						"              <li>Year of Graduation: "+ye2+"</li>\r\n" + 
+						"              <li>Institution: "+in2+" </li>\r\n" + 
+						"              <li>Year of Graduation: "+ye2+" </li>\r\n" + 
 						"              <li>CGPA: "+cg2+" on a scale of 5</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"\r\n" + 
@@ -409,7 +422,7 @@ public class MainController implements EventHandler<ActionEvent> {
 						"            <ul>\r\n" + 
 						"              <li>Institution: "+in3+"</li>\r\n" + 
 						"              <li>Year of Graduation: "+ye3+"</li>\r\n" + 
-						"              <li>CGPA:"+cg3+" on a scale of 5</li>\r\n" + 
+						"              <li>CGPA: "+cg3+" on a scale of 5</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
@@ -417,19 +430,10 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"content\">\r\n" + 
 						"            <h2>work experience</h2>\r\n" + 
 						"\r\n" + 
-						"            <h3>social media producer</h3>\r\n" + 
-						"            <h4>Red Media Company | Feb 2013 - Dec 2014</h4>\r\n" + 
+						"            <h3>"+de+"</h3>\r\n" + 
+						"            <h4>"+co+"</h4>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Managed social media accounts</li>\r\n" + 
-						"              <li>Created social media graphics for daily postings</li>\r\n" + 
-						"              <li>Increased social media following and clicks by 200%</li>\r\n" + 
-						"            </ul>\r\n" + 
-						"\r\n" + 
-						"            <h3>communications intern</h3>\r\n" + 
-						"            <h4>Red Media Interactive | Apr 2012 - Jan 2013</h4>\r\n" + 
-						"            <ul>\r\n" + 
-						"              <li>Developed a social media strategy to increase the following of the company website</li>\r\n" + 
-						"              <li>Spearheaded a viral campaign for one of the company's new products</li>\r\n" + 
+						"              <li>"+wo+"</li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
@@ -474,6 +478,7 @@ public class MainController implements EventHandler<ActionEvent> {
 						"  \r\n" + 
 						"</body>\r\n" + 
 						"</html>\r\n" + 
+						"\r\n" + 
 						"\r\n" + 
 						"");
 				
