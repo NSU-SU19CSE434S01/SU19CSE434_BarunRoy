@@ -106,6 +106,15 @@ public class MainController implements EventHandler<ActionEvent> {
 	public TextField achievements2;
 	
 	
+    /*Co-Extracurricular Activities*/
+	
+	@FXML
+	public TextField CoExtracurricularActivities1 ;
+	@FXML
+	public TextField CoExtracurricularActivities2;
+	
+	
+	
 
 
 	
@@ -114,7 +123,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	public Button Generate;
 	
 	@FXML
-	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2;
+	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2;
 	
 	public void press(ActionEvent args) {
 		Generate.setOnAction(this);
