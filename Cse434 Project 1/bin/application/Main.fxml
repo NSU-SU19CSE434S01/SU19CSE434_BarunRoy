@@ -143,7 +143,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="666.0" layoutY="659.0" prefHeight="57.0" prefWidth="248.0" />
+      <TextField fx:id="personalassessment" layoutX="666.0" layoutY="659.0" prefHeight="57.0" prefWidth="248.0" />
       <Label layoutX="985.0" layoutY="389.0" prefHeight="57.0" prefWidth="178.0" style="-fx-padding: 10px;" text="References" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
