@@ -201,13 +201,17 @@ public class MainController implements EventHandler<ActionEvent> {
 			String ac2=achievements2.getText();
 			
             
-			/*Co-Extracurricular Activities*/
+			/*CO-Extracurricular Activities*/
 			
 			String coe1=coextracurricularactivities1.getText();
 			String coe2=coextracurricularactivities2.getText();
 			
 			
-
+            /*Computer Expertise*/
+			
+			String com1=computerexpertise1.getText();
+			String com2=computerexpertise2.getText();
+			
 			
 			
 			
@@ -501,9 +505,8 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"content\">\r\n" + 
 						"            <h2>Computer Expertise</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>Very good Knowledge over MS Office (MS Word, MS Excel, MS PowerPoint)</li>\r\n" + 
-						"              <li>Good knowledge in Java, MySQL Database, HTML and CSS</li>\r\n" + 
-						"              <li>Sound knowledge in Android Studio</li>\r\n" + 
+						"              <li>"+com1+"</li>\r\n" + 
+						"              <li>"+com2+"</li>\r\n" +  
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"        </div>\r\n" + 
