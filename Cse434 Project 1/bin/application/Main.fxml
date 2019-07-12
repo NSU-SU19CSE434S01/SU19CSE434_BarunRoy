@@ -136,8 +136,8 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="662.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" promptText="1" />
-      <TextField layoutX="812.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" promptText="2" />
+      <TextField fx:id="computerexpertise1" layoutX="662.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" promptText="1" />
+      <TextField fx:id="computerexpertise2" layoutX="812.0" layoutY="545.0" prefHeight="25.0" prefWidth="115.0" promptText="2" />
       <Label layoutX="659.0" layoutY="591.0" prefHeight="57.0" prefWidth="197.0" style="-fx-padding: 10px;" text="Personal Assessment" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
