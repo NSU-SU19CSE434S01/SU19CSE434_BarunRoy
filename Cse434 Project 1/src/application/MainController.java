@@ -244,8 +244,15 @@ public class MainController implements EventHandler<ActionEvent> {
 			String per=personalassessment.getText();
 			
 			
+            /*References*/
 			
 			
+			String na2=name2.getText();
+			String de2=designation2.getText();
+			String co2=companyname2.getText();
+			String em2=email2.getText();
+			String ph2=phone2.getText();
+
 			
 			
 			String filename="Resume Generator.html";
@@ -471,14 +478,14 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"lists\">\r\n" +
 			            "            <h2>References</h2>\r\n" +
 			            "            <ul>\r\n" +
-			            "              <li>Name</li>\r\n" +
-			            "              <li>Designation</li>\r\n" +
-			            "              <li>Company Name</li>\r\n" +
-			            "              <li>Email</li>\r\n" + 
-			            "              <li>Phone</li>\r'n" +
+			            "              <li>"+na2+"</li>\r\n" +
+			            "              <li>"+de2+"</li>\r\n" +
+			            "              <li>"+co2+"</li>\r\n" +
+			            "              <li>"+em2+"</li>\r\n" + 
+			            "              <li>"+ph2+"</li>\r\n" +
 			            "           </ul>\r\n" +
 			            "         </div>\r\n" +
-																		
+			            
 			            
 			            "        </div> <!-- end wrapper -->\r\n" + 
 						"      </div> <!-- end section left -->\r\n" + 
