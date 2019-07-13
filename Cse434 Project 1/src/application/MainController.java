@@ -222,7 +222,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			String com2=computerexpertise2.getText();
 			
 			
-            /*Computer Expertise*/
+            /*Personal assessment*/
 			
 			String per=personalassessment.getText();
 			

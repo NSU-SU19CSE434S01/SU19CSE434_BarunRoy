@@ -144,14 +144,13 @@
          </font>
       </Label>
       <TextField fx:id="personalassessment" layoutX="666.0" layoutY="659.0" prefHeight="57.0" prefWidth="248.0" />
-      <Label layoutX="985.0" layoutY="389.0" prefHeight="57.0" prefWidth="178.0" style="-fx-padding: 10px;" text="References" underline="true">
+      <Label layoutX="1327.0" layoutY="372.0" prefHeight="50.0" prefWidth="178.0" style="-fx-padding: 10px;" text="References" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="977.0" layoutY="469.0" prefHeight="37.0" prefWidth="218.0" promptText="Reference 1" />
-      <TextField layoutX="978.0" layoutY="533.0" prefHeight="37.0" prefWidth="218.0" promptText="Reference 2" />
-      <Label layoutX="985.0" layoutY="78.0" prefHeight="57.0" prefWidth="248.0" style="-fx-padding: 10px;" text="Insert Passport Size Picture" underline="true">
+      <TextField layoutX="1412.0" layoutY="434.0" prefHeight="27.0" prefWidth="147.0" />
+      <Label layoutX="1322.0" layoutY="78.0" prefHeight="57.0" prefWidth="239.0" style="-fx-padding: 10px;" text="Insert Passport Size Picture" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
@@ -159,6 +158,15 @@
       <TextField fx:id="workdone" layoutX="661.0" layoutY="177.0" prefHeight="37.0" prefWidth="275.0" promptText="Details of work you have done in the company" />
       <TextField fx:id="achievements2" layoutX="659.0" layoutY="333.0" prefHeight="37.0" prefWidth="268.0" promptText="2." />
       <TextField fx:id="companyname" layoutX="804.0" layoutY="128.0" prefHeight="37.0" prefWidth="130.0" promptText="Company Name" />
+      <Label layoutX="1320.0" layoutY="425.0" prefHeight="37.0" prefWidth="72.0" text="Name" />
+      <Label layoutX="1320.0" layoutY="472.0" prefHeight="37.0" prefWidth="72.0" text="Designation" />
+      <TextField layoutX="1412.0" layoutY="476.0" prefHeight="27.0" prefWidth="147.0" />
+      <Label layoutX="1320.0" layoutY="515.0" prefHeight="37.0" prefWidth="92.0" text="Company Name" />
+      <Label layoutX="1320.0" layoutY="552.0" prefHeight="37.0" prefWidth="72.0" text="Email" />
+      <Label layoutX="1320.0" layoutY="590.0" prefHeight="37.0" prefWidth="72.0" text="Phone" />
+      <TextField layoutX="1412.0" layoutY="520.0" prefHeight="27.0" prefWidth="147.0" />
+      <TextField layoutX="1412.0" layoutY="557.0" prefHeight="27.0" prefWidth="147.0" />
+      <TextField layoutX="1412.0" layoutY="595.0" prefHeight="27.0" prefWidth="147.0" />
    </children>
    <effect>
       <ColorAdjust />
