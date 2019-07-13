@@ -149,7 +149,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="1412.0" layoutY="434.0" prefHeight="27.0" prefWidth="147.0" />
+      <TextField fx:id="name2" layoutX="1412.0" layoutY="434.0" prefHeight="27.0" prefWidth="147.0" />
       <Label layoutX="1322.0" layoutY="78.0" prefHeight="57.0" prefWidth="239.0" style="-fx-padding: 10px;" text="Insert Passport Size Picture" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
@@ -160,13 +160,13 @@
       <TextField fx:id="companyname" layoutX="804.0" layoutY="128.0" prefHeight="37.0" prefWidth="130.0" promptText="Company Name" />
       <Label layoutX="1320.0" layoutY="425.0" prefHeight="37.0" prefWidth="72.0" text="Name" />
       <Label layoutX="1320.0" layoutY="472.0" prefHeight="37.0" prefWidth="72.0" text="Designation" />
-      <TextField layoutX="1412.0" layoutY="476.0" prefHeight="27.0" prefWidth="147.0" />
+      <TextField fx:id="designation2" layoutX="1412.0" layoutY="476.0" prefHeight="27.0" prefWidth="147.0" />
       <Label layoutX="1320.0" layoutY="515.0" prefHeight="37.0" prefWidth="92.0" text="Company Name" />
       <Label layoutX="1320.0" layoutY="552.0" prefHeight="37.0" prefWidth="72.0" text="Email" />
       <Label layoutX="1320.0" layoutY="590.0" prefHeight="37.0" prefWidth="72.0" text="Phone" />
-      <TextField layoutX="1412.0" layoutY="520.0" prefHeight="27.0" prefWidth="147.0" />
-      <TextField layoutX="1412.0" layoutY="557.0" prefHeight="27.0" prefWidth="147.0" />
-      <TextField layoutX="1412.0" layoutY="595.0" prefHeight="27.0" prefWidth="147.0" />
+      <TextField fx:id="companyname2" layoutX="1412.0" layoutY="520.0" prefHeight="27.0" prefWidth="147.0" />
+      <TextField fx:id="email2" layoutX="1412.0" layoutY="557.0" prefHeight="27.0" prefWidth="147.0" />
+      <TextField fx:id="phone2" layoutX="1412.0" layoutY="595.0" prefHeight="27.0" prefWidth="147.0" />
    </children>
    <effect>
       <ColorAdjust />

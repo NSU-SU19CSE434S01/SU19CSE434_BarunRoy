@@ -128,6 +128,23 @@ public class MainController implements EventHandler<ActionEvent> {
 	public TextField personalassessment;
 	
 	
+	/*References*/
+	
+	
+	@FXML
+	public TextField name2;
+	@FXML
+	public TextField designation2;
+	@FXML
+	public TextField companyname2;
+	@FXML
+	public TextField email2;
+	@FXML
+	public TextField phone2;
+	
+	
+	
+	
 	
 	
 	
@@ -136,7 +153,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	public Button Generate;
 	
 	@FXML
-	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per;
+	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
 	
 	public void press(ActionEvent args) {
 		Generate.setOnAction(this);
@@ -448,8 +465,22 @@ public class MainController implements EventHandler<ActionEvent> {
 						"            <p>\r\n" + 
 						"              "+per+"\r\n" + 
 						"            </p>\r\n" + 
-						"          </div>\r\n" + 
-						"        </div> <!-- end wrapper -->\r\n" + 
+						"          </div>\r\n" +
+						"\r\n" +
+						"\r\n" +
+						"          <div class=\"lists\">\r\n" +
+			            "            <h2>References</h2>\r\n" +
+			            "            <ul>\r\n" +
+			            "              <li>Name</li>\r\n" +
+			            "              <li>Designation</li>\r\n" +
+			            "              <li>Company Name</li>\r\n" +
+			            "              <li>Email</li>\r\n" + 
+			            "              <li>Phone</li>\r'n" +
+			            "           </ul>\r\n" +
+			            "         </div>\r\n" +
+																		
+			            
+			            "        </div> <!-- end wrapper -->\r\n" + 
 						"      </div> <!-- end section left -->\r\n" + 
 						"\r\n" + 
 						"             \r\n" + 
