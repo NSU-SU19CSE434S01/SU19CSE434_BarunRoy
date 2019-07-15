@@ -269,11 +269,13 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo3 = validatemobile();
 			
+			Boolean bo4 = validateemail();
 			
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true)){
+			
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true)){
 				
 			
 			try {
@@ -655,7 +657,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	private boolean validateaddress() {
-		Pattern p=Pattern.compile("[0-9]+[,] [a-zA-Z]+[,] [a-zA-Z]+");
+		Pattern p=Pattern.compile("[0-9]+[,] [a-zA-Z0-9]+[,] [a-zA-Z]+");
 		java.util.regex.Matcher m=p.matcher(address.getText());
 		if(m.find() && m.group().equals(address.getText())) {
 			return true;
@@ -686,6 +688,26 @@ public class MainController implements EventHandler<ActionEvent> {
 			alert.setTitle("Validate Mobile No. under Personal Information");
 			alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid Mobile No. under Personal Information. The mobile no. should start with zero and contain exactly 11 digits(not more not less). Example: 01684919588" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	
+	private boolean validateemail() {
+		Pattern p=Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
+		java.util.regex.Matcher m=p.matcher(email.getText());
+		if(m.find() && m.group().equals(email.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate E-mail under Personal Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid E-mail under Personal Information. Example: roybarun36@gmail.com. Please follow the format of Example and no space between alphabets or numbers" );
 			alert.showAndWait();
 			
 			return false;
