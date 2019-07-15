@@ -685,7 +685,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Mobile No. under Personal Information");
 			alert.setHeaderText(null);
-			alert.setContentText("Please Enter a Valid Mobile No. under Personal Information" );
+			alert.setContentText("Please Enter a Valid Mobile No. under Personal Information. The mobile no. should start with zero and contain exactly 11 digits(not more not less). Example: 01684919588" );
 			alert.showAndWait();
 			
 			return false;
