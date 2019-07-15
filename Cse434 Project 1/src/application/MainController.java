@@ -269,6 +269,8 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			
 			
+			
+			
 			if(bo1.equals(true) & bo2.equals(true)){
 				
 			
@@ -628,8 +630,9 @@ public class MainController implements EventHandler<ActionEvent> {
 	}*/
 	
 	
+	
 	private boolean validatename() {
-		Pattern p=Pattern.compile("[a-zA-Z]+");
+		Pattern p=Pattern.compile("[a-zA-Z]+ [a-zA-Z]+");
 		java.util.regex.Matcher m=p.matcher(name.getText());
 		if(m.find() && m.group().equals(name.getText())) {
 			return true;
@@ -639,7 +642,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Name under Personal Information");
 			alert.setHeaderText(null);
-			alert.setContentText("Please Enter a Valid Name under Personal Information" );
+			alert.setContentText("Please Enter a Valid Name under Personal Information. It should contain only the First Name and the Last Name of your full name. Example: Barun Roy " );
 			alert.showAndWait();
 			
 			return false;
@@ -648,8 +651,9 @@ public class MainController implements EventHandler<ActionEvent> {
 	}
 	
 	
+	
 	private boolean validateaddress() {
-		Pattern p=Pattern.compile("[a-zA-Z]+");
+		Pattern p=Pattern.compile("[0-9]+[,] [a-zA-Z]+[,] [a-zA-Z]+");
 		java.util.regex.Matcher m=p.matcher(address.getText());
 		if(m.find() && m.group().equals(address.getText())) {
 			return true;
@@ -659,13 +663,18 @@ public class MainController implements EventHandler<ActionEvent> {
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Address under Personal Information");
 			alert.setHeaderText(null);
-			alert.setContentText("Please Enter a Valid Address under Personal Information" );
+			alert.setContentText("Please Enter a Valid Address under Personal Information. The Address should be in this format(Road Number, Name of your Area, Name of your City). Example: 32, Kalabgan, Dhaka. Please give the commas and the spacings as given in the format and example." );
 			alert.showAndWait();
 			
 			return false;
 		}
 		
 	}
+	
+	
+	
+	
+	
 
 	
 
