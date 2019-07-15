@@ -267,11 +267,13 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo2 = validateaddress();
 			
+			Boolean bo3 = validatemobile();
 			
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true)){
+			
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true)){
 				
 			
 			try {
@@ -670,6 +672,27 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 	}
+	
+	
+	private boolean validatemobile() {
+		Pattern p=Pattern.compile("(88)?[0][0-9]{10}");
+		java.util.regex.Matcher m=p.matcher(mobile.getText());
+		if(m.find() && m.group().equals(mobile.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Mobile No. under Personal Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Mobile No. under Personal Information" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
 	
 	
 	
