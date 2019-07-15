@@ -261,11 +261,15 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			String filename="Resume Generator.html";
 			
-			Boolean bo = validateTextFields();
+			/*Boolean bo = validateTextFields();*/
 			
 			Boolean bo1 = validatename();
 			
-			if(bo.equals(true) & bo1.equals(true)){
+			Boolean bo2 = validateaddress();
+			
+			
+			
+			if(bo1.equals(true) & bo2.equals(true)){
 				
 			
 			try {
@@ -607,8 +611,8 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 	}
 	
-	private boolean validateTextFields() {
-		if(address.getText().isEmpty() || mobile.getText().isEmpty() || email.getText().isEmpty() || dateofbirth.getText().isEmpty()) {
+	/*private boolean validateTextFields() {
+		if(name.getText().isEmpty() || address.getText().isEmpty() || mobile.getText().isEmpty() || email.getText().isEmpty() || dateofbirth.getText().isEmpty()) {
 			
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Fields");
@@ -621,7 +625,8 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 		return true;
-	}
+	}*/
+	
 	
 	private boolean validatename() {
 		Pattern p=Pattern.compile("[a-zA-Z]+");
@@ -635,6 +640,26 @@ public class MainController implements EventHandler<ActionEvent> {
 			alert.setTitle("Validate Name under Personal Information");
 			alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid Name under Personal Information" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	
+	private boolean validateaddress() {
+		Pattern p=Pattern.compile("[a-zA-Z]+");
+		java.util.regex.Matcher m=p.matcher(address.getText());
+		if(m.find() && m.group().equals(address.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Address under Personal Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Address under Personal Information" );
 			alert.showAndWait();
 			
 			return false;
