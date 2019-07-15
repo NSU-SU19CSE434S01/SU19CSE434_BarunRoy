@@ -2,6 +2,10 @@ package application;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.regex.Pattern;
+
+import com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Matcher;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -259,7 +263,9 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo = validateTextFields();
 			
-			if(bo.equals(true)){
+			Boolean bo1 = validatename();
+			
+			if(bo.equals(true) & bo1.equals(true)){
 				
 			
 			try {
@@ -602,7 +608,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	}
 	
 	private boolean validateTextFields() {
-		if(name.getText().isEmpty() || address.getText().isEmpty() || mobile.getText().isEmpty() || email.getText().isEmpty() || dateofbirth.getText().isEmpty()) {
+		if(address.getText().isEmpty() || mobile.getText().isEmpty() || email.getText().isEmpty() || dateofbirth.getText().isEmpty()) {
 			
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Fields");
@@ -616,6 +622,26 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 		return true;
 	}
+	
+	private boolean validatename() {
+		Pattern p=Pattern.compile("[a-zA-Z]+");
+		java.util.regex.Matcher m=p.matcher(name.getText());
+		if(m.find() && m.group().equals(name.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Name under Personal Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Name under Personal Information" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+
 	
 
 }
