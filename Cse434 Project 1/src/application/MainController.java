@@ -4,14 +4,13 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.regex.Pattern;
 
-import com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Matcher;
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class MainController implements EventHandler<ActionEvent> {
@@ -26,7 +25,9 @@ public class MainController implements EventHandler<ActionEvent> {
 	@FXML
 	public TextField email;
 	@FXML
-	public TextField dateofbirth;
+	public DatePicker dateofbirth;
+	
+	
 	
 	@FXML
 	public TextField careerobjective;
@@ -177,7 +178,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			String ad=address.getText();
 			String mo=mobile.getText();
 			String em=email.getText();
-			String da=dateofbirth.getText();
+			String da=dateofbirth.getEditor().getText();
 			
 			String ca=careerobjective.getText();
 			
