@@ -272,11 +272,13 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo4 = validateemail();
 			
+			Boolean bo5 = validatedateofbirth();
 			
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true)){
+			
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true)){
 				
 			
 			try {
@@ -709,6 +711,26 @@ public class MainController implements EventHandler<ActionEvent> {
 			alert.setTitle("Validate E-mail under Personal Information");
 			alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid E-mail under Personal Information. Example: roybarun36@gmail.com. Please follow the format of Example and no space between alphabets or numbers" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	
+	private boolean validatedateofbirth() {
+		Pattern p=Pattern.compile("[0-9/]+");
+		java.util.regex.Matcher m=p.matcher(dateofbirth.getEditor().getText());
+		if(m.find() && m.group().equals(dateofbirth.getEditor().getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Date of Birth under Personal Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Date of Birth under Personal Information. Please click the DatePicker and select your date and keep as it is or you can write as the format given in example. Example: 12/8/1996 " );
 			alert.showAndWait();
 			
 			return false;
