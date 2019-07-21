@@ -12,6 +12,8 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 public class MainController implements EventHandler<ActionEvent> {
 	
@@ -28,22 +30,36 @@ public class MainController implements EventHandler<ActionEvent> {
 	public DatePicker dateofbirth;
 	
 	
-	
 	@FXML
 	public TextField careerobjective;
 	
 	@FXML
-	public TextField personalskills1;
+	public HBox nextpersonalskill[] = new HBox[20];
+	
 	@FXML
-	public TextField personalskills2;
+	public VBox dyvbox1;
+	
 	@FXML
-	public TextField personalskills3;
+	public VBox dyvbox2;
+	
+	
 	@FXML
-	public TextField personalskills4;
+	public TextField textField[] = new TextField[20];
+	public static String tex[]   = new String[20];
+	
+	
 	@FXML
-	public TextField personalskills5;
-	@FXML
-	public TextField personalskills6;
+	public TextField textField1[] = new TextField[20];
+	public static String tex1[]   = new String[20];
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FXML
 	public TextField professionalskills1;
@@ -158,11 +174,21 @@ public class MainController implements EventHandler<ActionEvent> {
 	public Button Generate;
 	
 	@FXML
+	public Button newpersonalskill;
+	
+	@FXML
 	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
+	
 	
 	public void press(ActionEvent args) {
 		Generate.setOnAction(this);
 		
+	}
+	
+	//To dynamically add TextFields for personal skills//
+	
+	public void new_personalskill(ActionEvent args) {
+		newpersonalskill.setOnAction(this);
 	}
 	
 	
@@ -182,12 +208,12 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			String ca=careerobjective.getText();
 			
-			String pe1=personalskills1.getText();
-			String pe2=personalskills2.getText();
-			String pe3=personalskills3.getText();
-			String pe4=personalskills4.getText();
-			String pe5=personalskills5.getText();
-			String pe6=personalskills6.getText();
+			
+			
+			
+			
+			
+		
 			
 			String pr1=professionalskills1.getText();
 			String pr2=professionalskills2.getText();
@@ -735,6 +761,11 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			return false;
 		}
+		
+	}
+	
+	
+	if(args.getSource()==newpersonalskill) {
 		
 	}
 	

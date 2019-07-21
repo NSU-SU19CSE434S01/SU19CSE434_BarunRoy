@@ -6,6 +6,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1000.0" prefWidth="1600.0" style="-fx-background-color: Lightgrey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
@@ -90,12 +92,11 @@
       <TextField fx:id="yearofgraduation2" layoutX="440.0" layoutY="436.0" prefHeight="26.0" prefWidth="149.0" />
       <Label layoutX="324.0" layoutY="582.0" prefHeight="37.0" prefWidth="115.0" text="O' Level or SSC ?" />
       <TextField fx:id="olevelorssc" layoutX="432.0" layoutY="582.0" prefHeight="26.0" prefWidth="149.0" />
-      <Label layoutX="22.0" layoutY="443.0" prefHeight="46.0" prefWidth="156.0" style="-fx-padding: 10px;" text="Personal Skills" underline="true">
+      <Label layoutX="994.0" layoutY="80.0" prefHeight="46.0" prefWidth="156.0" style="-fx-padding: 10px;" text="Personal Skills" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="personalskills1" layoutX="26.0" layoutY="490.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 1" />
       <Label layoutX="22.0" layoutY="613.0" prefHeight="46.0" prefWidth="180.0" style="-fx-padding: 10px;" text="Professional Skills" underline="true">
          <font>
             <Font name="System Bold Italic" size="17.0" />
@@ -107,11 +108,6 @@
          </font>
       </Label>
       <TextField fx:id="designation" layoutX="662.0" layoutY="128.0" prefHeight="37.0" prefWidth="130.0" promptText="Designation" />
-      <TextField fx:id="personalskills2" layoutX="150.0" layoutY="491.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 2" />
-      <TextField fx:id="personalskills3" layoutX="26.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 3" />
-      <TextField fx:id="personalskills4" layoutX="150.0" layoutY="530.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 4" />
-      <TextField fx:id="personalskills5" layoutX="27.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 5" />
-      <TextField fx:id="personalskills6" layoutX="150.0" layoutY="568.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 6" />
       <TextField fx:id="professionalskills2" layoutX="160.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 2" />
       <TextField fx:id="professionalskills3" layoutX="26.0" layoutY="703.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 3" />
       <TextField fx:id="professionalskills1" layoutX="26.0" layoutY="665.0" prefHeight="27.0" prefWidth="101.0" promptText="Skill 1" />
@@ -155,7 +151,7 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="workdone" layoutX="661.0" layoutY="177.0" prefHeight="37.0" prefWidth="275.0" promptText="Details of work you have done in the company" />
+      <TextField fx:id="workdone" layoutX="663.0" layoutY="180.0" prefHeight="37.0" prefWidth="275.0" promptText="Details of work you have done in the company" />
       <TextField fx:id="achievements2" layoutX="659.0" layoutY="333.0" prefHeight="37.0" prefWidth="268.0" promptText="2." />
       <TextField fx:id="companyname" layoutX="804.0" layoutY="128.0" prefHeight="37.0" prefWidth="130.0" promptText="Company Name" />
       <Label layoutX="1320.0" layoutY="425.0" prefHeight="37.0" prefWidth="72.0" text="Name" />
@@ -168,6 +164,21 @@
       <TextField fx:id="email2" layoutX="1412.0" layoutY="557.0" prefHeight="27.0" prefWidth="147.0" />
       <TextField fx:id="phone2" layoutX="1412.0" layoutY="595.0" prefHeight="27.0" prefWidth="147.0" />
       <DatePicker fx:id="dateofbirth" layoutX="104.0" layoutY="280.0" prefHeight="25.0" prefWidth="149.0" />
+      <HBox fx:id="nextpersonalskill" layoutX="1000.0" layoutY="127.0" prefHeight="268.0" prefWidth="261.0">
+         <children>
+            <VBox fx:id="dyvbox1" prefHeight="268.0" prefWidth="134.0">
+               <children>
+                  <TextField fx:id="textField" prefHeight="27.0" prefWidth="113.0" promptText="Skill 1" />
+               </children>
+            </VBox>
+            <VBox fx:id="dyvbox2" prefHeight="268.0" prefWidth="134.0">
+               <children>
+                  <TextField fx:id="textField1" prefHeight="27.0" prefWidth="116.0" promptText="Skill 2" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="newpersonalskill" layoutX="1000.0" layoutY="405.0" mnemonicParsing="false" onAction="#new_personalskill" prefHeight="25.0" prefWidth="226.0" text="Click here to add more Personal Skills" />
    </children>
    <effect>
       <ColorAdjust />
