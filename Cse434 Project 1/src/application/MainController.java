@@ -53,6 +53,13 @@ public class MainController implements EventHandler<ActionEvent> {
 	public static String tex1[]   = new String[20];
 	
 	
+	public int i=0;
+	
+	public int last=0;
+	
+	public int j=0;
+	
+	
 	
 	
 	
@@ -177,7 +184,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	public Button newpersonalskill;
 	
 	@FXML
-	String na,ad,mo,em,da,ca,pe1,pe2,pe3,pe4,pe5,pe6,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
+	String na,ad,mo,em,da,ca,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
 	
 	
 	public void press(ActionEvent args) {
@@ -207,6 +214,8 @@ public class MainController implements EventHandler<ActionEvent> {
 			String da=dateofbirth.getEditor().getText();
 			
 			String ca=careerobjective.getText();
+			
+			
 			
 			
 			
@@ -309,7 +318,8 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			try {
 				PrintWriter outputStream = new PrintWriter(filename);
-				outputStream.println("<!DOCTYPE html>\r\n" + 
+				
+		                String fp = ("<!DOCTYPE html>\r\n" + 
 						"<html lang=\"en\">\r\n" + 
 						"<head>\r\n" + 
 						"  <meta charset=\"UTF-8\">\r\n" + 
@@ -489,17 +499,18 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"lists\">\r\n" + 
 						"            <h2>Personal Skills</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>"+pe1+"</li>\r\n" + 
-						"              <li>"+pe2+"</li>\r\n" + 
-						"              <li>"+pe3+"</li>\r\n" + 
-						"              <li>"+pe4+"</li>\r\n" + 
-						"              <li>"+pe5+"</li>\r\n" + 
-						"              <li>"+pe6+"</li>\r\n" + 
+						"              <li>     </li>\r\n" + 
+						"              <li>     </li>\r\n" + 
+						"              <li>     </li>\r\n" + 
+						"              <li>     </li>\r\n" + 
+						"              <li>     </li>\r\n" + 
+						"              <li>     </li>\r\n" + 
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
-						"\r\n" + 
-						"          <div class=\"lists\">\r\n" + 
+						"\r\n" ); 
+						
+						String lp=("<div class=\"lists\">\r\n" + 
 						"            <h2>Professional Skills</h2>\r\n" + 
 						"            <ul>\r\n" + 
 						"              <li>"+pr1+"</li>\r\n" + 
@@ -623,8 +634,17 @@ public class MainController implements EventHandler<ActionEvent> {
 						"</body>\r\n" + 
 						"</html>\r\n" + 
 						"\r\n" + 
-						"\r\n" + 
-						"");
+						"\r\n") ;
+		                outputStream.println(fp);
+						
+		                
+		                String mp=null,n;
+		                
+		                for(j=0;j<last;j++) {
+		                	n="<h1>" + textField[j].getText()+"<h1>";
+		                	mp=mp+n;
+		                }
+		                
 				
 				outputStream.close();
 				System.out.println("Generated");
@@ -764,17 +784,37 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 	}
 	
-	
-	if(args.getSource()==newpersonalskill) {
+	public void dynamic(ActionEvent args) {
+		
+		 
+		if(i<8) {
+			if (i==0 || i%2==0) {
+				
+				
+				textField[i] = new TextField();
+				textField[i].getStyleClass().add("dy-text");
+				
+				dyvbox1.getChildren().add(textField[i]);
+				dyvbox1.setSpacing(20);
+			}
+			
+			else {
+				
+				textField[i] = new TextField();
+                textField[i].getStyleClass().add("dy-text");
+				
+				dyvbox2.getChildren().addAll(textField[i]);
+				dyvbox2.setSpacing(20);
+				
+			}
+			
+			i=i+1;
+			last =i;
+			
+		}
 		
 	}
 	
-	
-	
-	
-	
-	
-
-	
-
 }
+	
+
