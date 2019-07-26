@@ -1,8 +1,20 @@
 package application;
 
+import java.awt.Font;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.regex.Pattern;
+
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
+import com.sun.prism.Image;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,6 +27,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 
 public class MainController implements EventHandler<ActionEvent> {
 	
@@ -40,8 +53,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	@FXML
 	public VBox dyvbox1;
 	
-	@FXML
-	public VBox dyvbox2;
+	
 	
 	
 	@FXML
@@ -49,9 +61,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	public static String tex[]   = new String[20];
 	
 	
-	@FXML
-	public TextField textfield2[] = new TextField[20];
-	public static String tex1[]   = new String[20];
+	
 	
 	
 	int i=0;
@@ -61,7 +71,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	int j=0;
 	
 	@FXML
-	String mp,n,l;
+	String fp,lp,mp,n,l,Image;
 	
 	
 	
@@ -208,7 +218,9 @@ public class MainController implements EventHandler<ActionEvent> {
 		Generate.setOnAction(this);
 	}
 	
-	
+	public void Resume_picture(ActionEvent args) {
+		Resumepicture.setOnAction(this);
+	}
 	
 	
 	
@@ -327,7 +339,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			try {
 				PrintWriter outputStream = new PrintWriter(filename);
 				
-		                outputStream.println("<!DOCTYPE html>\r\n" + 
+		                String fp = ("<!DOCTYPE html>\r\n" + 
 						"<html lang=\"en\">\r\n" + 
 						"<head>\r\n" + 
 						"  <meta charset=\"UTF-8\">\r\n" + 
@@ -518,9 +530,9 @@ public class MainController implements EventHandler<ActionEvent> {
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
-						"\r\n" +
+						"\r\n" );
 						
-						"          <div class=\"lists\">\r\n" + 
+						String lp="<div class=\"lists\">\r\n" + 
 						"            <h2>Professional Skills</h2>\r\n" + 
 						"            <ul>\r\n" + 
 						"              <li>"+pr1+"</li>\r\n" + 
@@ -644,15 +656,16 @@ public class MainController implements EventHandler<ActionEvent> {
 						"</body>\r\n" + 
 						"</html>\r\n" + 
 						"\r\n" + 
-						"\r\n");
+						"\r\n";
+						outputStream.println(fp+mp+lp);
 		                
-						
-		                
-		                
-		                String mp=null,n;
+								                
+		            
+		                //String mp=null,n;//
 		                for(i=0;i<last;i++) {
 		                	n="<h1>" + textfield1[i].getText()+"<h1>";
 		                	mp=mp+n;
+		                	
 		                }
 		               
 				
@@ -798,10 +811,10 @@ public class MainController implements EventHandler<ActionEvent> {
 	public void dynamic(ActionEvent args) {
 		
 		if(args.getSource()==newpersonalskill) { 
-		if(i<8) {
+		if(i<7) {
+			
 			
 				
-			
 				textfield1[i] = new TextField();
 				textfield1[i].getStyleClass().add("dy-text");
 				
@@ -815,11 +828,59 @@ public class MainController implements EventHandler<ActionEvent> {
 			}
 			
 			else { }
+			
+			
 						
 		}
 		
 	}
 	
+	
+	public void choose_pic(ActionEvent args)throws IOException{
+		
+		FileChooser fc = new FileChooser();
+	    File selectedFile = fc.showOpenDialog(null);
+	    String working_dir = System.getProperty("user.dir");
+	    
+	    working_dir = working_dir+ "\\";
+	    String path = selectedFile.getAbsolutePath();
+	    
+	    working_dir = working_dir.replace("\\", "\\\\");
+	    
+	    working_dir = working_dir+"Barun.png";
+	    System.out.println(working_dir);
+	    
+	    try {
+	    	FileInputStream in = new FileInputStream(path);
+	    	FileOutputStream out = new FileOutputStream(working_dir);
+	    	
+	    	BufferedInputStream bin = new BufferedInputStream(in);
+	    	BufferedOutputStream bout = new BufferedOutputStream(out);
+	    	
+	    	int b=0;
+	    	while(b!= -1) {
+	    		b= bin.read();
+	    		bout.write(b);
+	    	}
+	    	
+	    	bin.close();
+	    	bout.close();
+	    	
+	    }
+	    
+	    catch(FileNotFoundException e) {
+	    	
+	    	System.out.println("Couldn't copy to destination");
+	    }
+	    
+	    File file1 = new File("Barun.png");
+	    
+	    
+		
+	}
+	
+	
+	 
 	
 	 
 	
