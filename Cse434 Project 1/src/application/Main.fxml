@@ -5,8 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -153,7 +153,7 @@
       </Label>
       <TextField fx:id="workdone" layoutX="663.0" layoutY="180.0" prefHeight="37.0" prefWidth="275.0" promptText="Details of work you have done in the company" />
       <TextField fx:id="achievements2" layoutX="659.0" layoutY="333.0" prefHeight="37.0" prefWidth="268.0" promptText="2." />
-      <TextField fx:id="companyname" layoutX="804.0" layoutY="128.0" prefHeight="37.0" prefWidth="130.0" promptText="Company Name" />
+      <TextField fx:id="companyname" layoutX="812.0" layoutY="126.0" prefHeight="37.0" prefWidth="130.0" promptText="Company Name" />
       <Label layoutX="1320.0" layoutY="425.0" prefHeight="37.0" prefWidth="72.0" text="Name" />
       <Label layoutX="1320.0" layoutY="472.0" prefHeight="37.0" prefWidth="72.0" text="Designation" />
       <TextField fx:id="designation2" layoutX="1412.0" layoutY="476.0" prefHeight="27.0" prefWidth="147.0" />
@@ -164,21 +164,14 @@
       <TextField fx:id="email2" layoutX="1412.0" layoutY="557.0" prefHeight="27.0" prefWidth="147.0" />
       <TextField fx:id="phone2" layoutX="1412.0" layoutY="595.0" prefHeight="27.0" prefWidth="147.0" />
       <DatePicker fx:id="dateofbirth" layoutX="104.0" layoutY="280.0" prefHeight="25.0" prefWidth="149.0" />
-      <HBox fx:id="nextpersonalskill" layoutX="1000.0" layoutY="127.0" prefHeight="268.0" prefWidth="261.0">
+      <Button fx:id="newpersonalskill" layoutX="1000.0" layoutY="449.0" mnemonicParsing="false" onAction="#new_personalskill" prefHeight="25.0" prefWidth="226.0" text="Click here to add more Personal Skills" />
+      <VBox fx:id="dyvbox1" layoutX="999.0" layoutY="135.0" prefHeight="200.0" prefWidth="178.0">
          <children>
-            <VBox fx:id="dyvbox1" prefHeight="268.0" prefWidth="134.0">
-               <children>
-                  <TextField fx:id="textField" prefHeight="27.0" prefWidth="113.0" promptText="Skill 1" />
-               </children>
-            </VBox>
-            <VBox fx:id="dyvbox2" prefHeight="268.0" prefWidth="134.0">
-               <children>
-                  <TextField fx:id="textField1" prefHeight="27.0" prefWidth="116.0" promptText="Skill 2" />
-               </children>
-            </VBox>
+            <TextField fx:id="textField1" prefHeight="25.0" prefWidth="130.0" />
          </children>
-      </HBox>
-      <Button fx:id="newpersonalskill" layoutX="1000.0" layoutY="405.0" mnemonicParsing="false" onAction="#new_personalskill" prefHeight="25.0" prefWidth="226.0" text="Click here to add more Personal Skills" />
+      </VBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1342.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="Resumepicture" layoutX="1337.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" text="Click Here to insert Picture" />
    </children>
    <effect>
       <ColorAdjust />

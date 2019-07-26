@@ -12,6 +12,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -44,20 +45,23 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	@FXML
-	public TextField textField[] = new TextField[20];
+	public TextField textfield1[] = new TextField[20];
 	public static String tex[]   = new String[20];
 	
 	
 	@FXML
-	public TextField textField1[] = new TextField[20];
+	public TextField textfield2[] = new TextField[20];
 	public static String tex1[]   = new String[20];
 	
 	
-	public int i=0;
+	int i=0;
 	
-	public int last=0;
+	int last=0;
 	
-	public int j=0;
+	int j=0;
+	
+	@FXML
+	String mp,n,l;
 	
 	
 	
@@ -172,7 +176,14 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	
+	@FXML
+	public Button newpersonalskill;
 	
+	@FXML
+	public Button Resumepicture;
+	
+	@FXML
+	public ImageView Im;
 	
 	
 	
@@ -180,23 +191,26 @@ public class MainController implements EventHandler<ActionEvent> {
 	@FXML
 	public Button Generate;
 	
-	@FXML
-	public Button newpersonalskill;
+	
 	
 	@FXML
 	String na,ad,mo,em,da,ca,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
 	
-	
-	public void press(ActionEvent args) {
-		Generate.setOnAction(this);
-		
-	}
 	
 	//To dynamically add TextFields for personal skills//
 	
 	public void new_personalskill(ActionEvent args) {
 		newpersonalskill.setOnAction(this);
 	}
+	
+	
+	public void press(ActionEvent args) {
+		Generate.setOnAction(this);
+	}
+	
+	
+	
+	
 	
 	
 	@Override
@@ -215,14 +229,8 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			String ca=careerobjective.getText();
 			
-			
-			
-			
-			
-			
-			
-			
 		
+
 			
 			String pr1=professionalskills1.getText();
 			String pr2=professionalskills2.getText();
@@ -240,7 +248,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			String cg1=cgpa1.getText();
 			
 			/*A'Level/HSC Information*/
-			
+		
 			String al=alevelorhsc.getText();
 			String in2=institution2.getText();
 			String ye2=yearofgraduation2.getText();
@@ -274,7 +282,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			
             /*Computer Expertise*/
-			
+		
 			String com1=computerexpertise1.getText();
 			String com2=computerexpertise2.getText();
 			
@@ -319,7 +327,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			try {
 				PrintWriter outputStream = new PrintWriter(filename);
 				
-		                String fp = ("<!DOCTYPE html>\r\n" + 
+		                outputStream.println("<!DOCTYPE html>\r\n" + 
 						"<html lang=\"en\">\r\n" + 
 						"<head>\r\n" + 
 						"  <meta charset=\"UTF-8\">\r\n" + 
@@ -504,13 +512,15 @@ public class MainController implements EventHandler<ActionEvent> {
 						"              <li>     </li>\r\n" + 
 						"              <li>     </li>\r\n" + 
 						"              <li>     </li>\r\n" + 
-						"              <li>     </li>\r\n" + 
+						"              <li>     </li>\r\n" +
+						"              <li>     </li>\r\n" +
+						"              <li>     </li>\r\n" +
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
-						"\r\n" ); 
+						"\r\n" +
 						
-						String lp=("<div class=\"lists\">\r\n" + 
+						"          <div class=\"lists\">\r\n" + 
 						"            <h2>Professional Skills</h2>\r\n" + 
 						"            <ul>\r\n" + 
 						"              <li>"+pr1+"</li>\r\n" + 
@@ -634,17 +644,17 @@ public class MainController implements EventHandler<ActionEvent> {
 						"</body>\r\n" + 
 						"</html>\r\n" + 
 						"\r\n" + 
-						"\r\n") ;
-		                outputStream.println(fp);
+						"\r\n");
+		                
 						
 		                
-		                String mp=null,n;
 		                
-		                for(j=0;j<last;j++) {
-		                	n="<h1>" + textField[j].getText()+"<h1>";
+		                String mp=null,n;
+		                for(i=0;i<last;i++) {
+		                	n="<h1>" + textfield1[i].getText()+"<h1>";
 		                	mp=mp+n;
 		                }
-		                
+		               
 				
 				outputStream.close();
 				System.out.println("Generated");
@@ -666,7 +676,8 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 	}
 	
-	/*private boolean validateTextFields() {
+	/*
+	private boolean validateTextFields() {
 		if(name.getText().isEmpty() || address.getText().isEmpty() || mobile.getText().isEmpty() || email.getText().isEmpty() || dateofbirth.getText().isEmpty()) {
 			
 			Alert alert=new Alert(AlertType.WARNING);
@@ -680,9 +691,9 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 		return true;
-	}*/
+	}
 	
-	
+	*/
 	
 	private boolean validatename() {
 		Pattern p=Pattern.compile("[a-zA-Z]+ [a-zA-Z]+");
@@ -786,34 +797,33 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	public void dynamic(ActionEvent args) {
 		
-		 
+		if(args.getSource()==newpersonalskill) { 
 		if(i<8) {
-			if (i==0 || i%2==0) {
+			
 				
+			
+				textfield1[i] = new TextField();
+				textfield1[i].getStyleClass().add("dy-text");
 				
-				textField[i] = new TextField();
-				textField[i].getStyleClass().add("dy-text");
+				textfield1[i].setPromptText("Add a skill");
 				
-				dyvbox1.getChildren().add(textField[i]);
+				dyvbox1.getChildren().addAll(textfield1[i]);
 				dyvbox1.setSpacing(20);
+				
+				i=i+1;
+				last =i;
 			}
 			
-			else {
-				
-				textField[i] = new TextField();
-                textField[i].getStyleClass().add("dy-text");
-				
-				dyvbox2.getChildren().addAll(textField[i]);
-				dyvbox2.setSpacing(20);
-				
-			}
-			
-			i=i+1;
-			last =i;
-			
+			else { }
+						
 		}
 		
 	}
+	
+	
+	 
+	
+	
 	
 }
 	
