@@ -164,14 +164,14 @@
       <TextField fx:id="email2" layoutX="1412.0" layoutY="557.0" prefHeight="27.0" prefWidth="147.0" />
       <TextField fx:id="phone2" layoutX="1412.0" layoutY="595.0" prefHeight="27.0" prefWidth="147.0" />
       <DatePicker fx:id="dateofbirth" layoutX="104.0" layoutY="280.0" prefHeight="25.0" prefWidth="149.0" />
-      <Button fx:id="newpersonalskill" layoutX="1000.0" layoutY="449.0" mnemonicParsing="false" onAction="#new_personalskill" prefHeight="25.0" prefWidth="226.0" text="Click here to add more Personal Skills" />
+      <Button fx:id="Newpersonalskill" layoutX="1000.0" layoutY="449.0" mnemonicParsing="false" onAction="#newpersonalskill" prefHeight="25.0" prefWidth="226.0" text="Click here to add more Personal Skills" />
       <VBox fx:id="dyvbox1" layoutX="999.0" layoutY="135.0" prefHeight="200.0" prefWidth="178.0">
          <children>
             <TextField fx:id="textField1" prefHeight="25.0" prefWidth="130.0" />
          </children>
       </VBox>
       <ImageView fx:id="Im" fitHeight="150.0" fitWidth="200.0" layoutX="1342.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="Resumepicture" layoutX="1337.0" layoutY="323.0" mnemonicParsing="false" onAction="#Resume_picture" prefHeight="25.0" prefWidth="226.0" text="Click Here to insert Picture" />
+      <Button fx:id="Resumepicture" layoutX="1337.0" layoutY="323.0" mnemonicParsing="false" onAction="#resumepicture" prefHeight="25.0" prefWidth="226.0" text="Click Here to insert Picture" />
    </children>
    <effect>
       <ColorAdjust />

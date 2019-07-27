@@ -1,6 +1,5 @@
 package application;
 
-import java.awt.Font;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -11,10 +10,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.regex.Pattern;
 
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 
-import com.sun.prism.Image;
+
+
+//import com.sun.prism.Image;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -25,6 +24,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
@@ -71,7 +71,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	int j=0;
 	
 	@FXML
-	String fp,lp,mp,n,l,Image;
+	String fp,lp,mp,n,l;
 	
 	
 	
@@ -187,13 +187,17 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	@FXML
-	public Button newpersonalskill;
+	public Button Newpersonalskill;
 	
 	@FXML
 	public Button Resumepicture;
 	
 	@FXML
 	public ImageView Im;
+	
+	
+	
+	
 	
 	
 	
@@ -209,8 +213,8 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	//To dynamically add TextFields for personal skills//
 	
-	public void new_personalskill(ActionEvent args) {
-		newpersonalskill.setOnAction(this);
+	public void newpersonalskill(ActionEvent args) {
+		Newpersonalskill.setOnAction(this);
 	}
 	
 	
@@ -218,7 +222,7 @@ public class MainController implements EventHandler<ActionEvent> {
 		Generate.setOnAction(this);
 	}
 	
-	public void Resume_picture(ActionEvent args) {
+	public void resumepicture(ActionEvent args) {
 		Resumepicture.setOnAction(this);
 	}
 	
@@ -661,7 +665,7 @@ public class MainController implements EventHandler<ActionEvent> {
 		                
 								                
 		            
-		                //String mp=null,n;//
+		                String mp=null,n;
 		                for(i=0;i<last;i++) {
 		                	n="<h1>" + textfield1[i].getText()+"<h1>";
 		                	mp=mp+n;
@@ -810,7 +814,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	public void dynamic(ActionEvent args) {
 		
-		if(args.getSource()==newpersonalskill) { 
+		if(args.getSource()==Newpersonalskill) { 
 		if(i<7) {
 			
 			
@@ -828,15 +832,12 @@ public class MainController implements EventHandler<ActionEvent> {
 			}
 			
 			else { }
-			
-			
-						
+		
 		}
 		
 	}
 	
-	
-	public void choose_pic(ActionEvent args)throws IOException{
+public void choose_pic(ActionEvent args)throws IOException{
 		
 		FileChooser fc = new FileChooser();
 	    File selectedFile = fc.showOpenDialog(null);
@@ -867,20 +868,22 @@ public class MainController implements EventHandler<ActionEvent> {
 	    	bout.close();
 	    	
 	    }
-	    
 	    catch(FileNotFoundException e) {
 	    	
-	    	System.out.println("Couldn't copy to destination");
+	    	System.out.println("Failed to copy");
 	    }
 	    
-	    File file1 = new File("Barun.png");
+	    File file1 = new File("barun.png");
+	    Image image=new Image(file1.toURI().toString());
+	    Im.setImage(image);
 	    
 	    
 		
 	}
 	
 	
-	 
+	
+	
 	
 	 
 	
