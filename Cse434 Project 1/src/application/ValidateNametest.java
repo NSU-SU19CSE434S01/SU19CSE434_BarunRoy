@@ -38,7 +38,7 @@ class ValidateNametest {
 		@Test
 		void validateemailtest() {
 			MainController junit = new MainController();
-			String result = junit.validateemail("32, Lake, Kalabagan");
+			String result = junit.validateemail("roybarun36@gmail.com");
 			assertTrue(result);
 			
 		}
@@ -47,10 +47,62 @@ class ValidateNametest {
 		@Test
 		void validatedateofbirthtest() {
 			MainController junit = new MainController();
-			String result = junit.validatedateofbirth("32, Lake, Kalabagan");
+			String result = junit.validatedateofbirth("12/08/1996");
 			assertTrue(result);
 			
 		}
+		
+		
+		@Test
+		void validatecareerobjectivetest() {
+			MainController junit = new MainController();
+			String result = junit.validatecareerobjective(" To work");
+			assertTrue(result);
+			
+		}
+		
+		
+		@Test
+		void validatemajortest() {
+			MainController junit = new MainController();
+			String result = junit.validatemajor("CSE");
+			assertTrue(result);
+			
+		}
+		
+		
+		@Test
+		void validateinstitution1test() {
+			MainController junit = new MainController();
+			String result = junit.validateinstitution1("32, Lake, Kalabagan");
+			assertTrue(result);
+			
+		}
+		
+		
+		@Test
+		void validateyearofgraduation1test() {
+			MainController junit = new MainController();
+			String result = junit.validateyearofgraduation1("32, Lake, Kalabagan");
+			assertTrue(result);
+			
+		}
+		
+		
+		@Test
+		void validatecgpa1test() {
+			MainController junit = new MainController();
+			String result = junit.validatecgpa1("32, Lake, Kalabagan");
+			assertTrue(result);
+			
+		}
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
