@@ -363,18 +363,11 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo18 = validatecgpa3();
 			
+			Boolean bo19 = validatepersonalassessment();
+			
 			
 
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true) & bo9.equals(true) & bo10.equals(true) & bo11.equals(true) & bo12.equals(true) & bo13.equals(true) & bo14.equals(true) & bo15.equals(true) & bo16.equals(true) & bo17.equals(true) & bo18.equals(true)){
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true) & bo9.equals(true) & bo10.equals(true) & bo11.equals(true) & bo12.equals(true) & bo13.equals(true) & bo14.equals(true) & bo15.equals(true) & bo16.equals(true) & bo17.equals(true) & bo18.equals(true) &bo19.equals(true)){
 				
 			
 			try {
@@ -1106,6 +1099,26 @@ public class MainController implements EventHandler<ActionEvent> {
 				alert.setTitle("Validate CGPA under O'Level or HSC Information ");
 				alert.setHeaderText(null);
 				alert.setContentText("Please Enter a Valid CGPA under O'Level or SSC Information . It should contain a value to 2 decimal places" );
+				alert.showAndWait();
+				
+				return false;
+			}
+			
+		}
+		
+		
+		private boolean validatepersonalassessment() {
+			Pattern p=Pattern.compile("([a-z A-Z]+)+");
+			java.util.regex.Matcher m=p.matcher(personalassessment.getText());
+			if(m.find() && m.group().equals(personalassessment.getText())) {
+				return true;
+			
+			}else {
+				
+				Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate personalassessment");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid Personal Assessment. It should only contain alphabetical words." );
 				alert.showAndWait();
 				
 				return false;
