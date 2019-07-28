@@ -61,6 +61,7 @@ class ValidateNametest {
 			
 		}
 		
+		//Test for Graduation Information//
 		
 		@Test
 		void validatemajortest() {
@@ -74,7 +75,7 @@ class ValidateNametest {
 		@Test
 		void validateinstitution1test() {
 			MainController junit = new MainController();
-			String result = junit.validateinstitution1("32, Lake, Kalabagan");
+			String result = junit.validateinstitution1("NSU");
 			assertTrue(result);
 			
 		}
@@ -83,7 +84,7 @@ class ValidateNametest {
 		@Test
 		void validateyearofgraduation1test() {
 			MainController junit = new MainController();
-			String result = junit.validateyearofgraduation1("32, Lake, Kalabagan");
+			String result = junit.validateyearofgraduation1("2019");
 			assertTrue(result);
 			
 		}
@@ -92,10 +93,48 @@ class ValidateNametest {
 		@Test
 		void validatecgpa1test() {
 			MainController junit = new MainController();
-			String result = junit.validatecgpa1("32, Lake, Kalabagan");
+			String result = junit.validatecgpa1("3.34");
 			assertTrue(result);
 			
 		}
+		
+		
+		//Test for A'Level or HSC Information//
+		
+				@Test
+				void validatealevelorhsctest() {
+					MainController junit = new MainController();
+					String result = junit.validatealevelorhsc("A Level");
+					assertTrue(result);
+					
+				}
+				
+				
+				@Test
+				void validateinstitution2test() {
+					MainController junit = new MainController();
+					String result = junit.validateinstitution2("MLIS");
+					assertTrue(result);
+					
+				}
+				
+				
+				@Test
+				void validateyearofgraduation2test() {
+					MainController junit = new MainController();
+					String result = junit.validateyearofgraduation1("2015");
+					assertTrue(result);
+					
+				}
+				
+				
+				@Test
+				void validatecgpa2test() {
+					MainController junit = new MainController();
+					String result = junit.validatecgpa1("4.67");
+					assertTrue(result);
+					
+				}
 		
 		
 		
