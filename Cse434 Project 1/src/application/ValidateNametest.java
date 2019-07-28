@@ -1,4 +1,4 @@
-/*package application;
+package application;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.Assert.assertTrue;
@@ -14,6 +14,20 @@ class ValidateNametest {
 		assertTrue(result);
 		
 	}
+	
+	
+	
+
+		@Test
+		void validateaddresstest() {
+			MainController junit = new MainController();
+			String result = junit.validateaddress("32, Lake, Kalabagan");
+			assertTrue(result);
+			
+		}
+		
+	
+	
 
 }
- */
+ 
