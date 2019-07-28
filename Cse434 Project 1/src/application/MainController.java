@@ -355,6 +355,14 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo14 = validatecgpa2();
 			
+            Boolean bo15 = validateolevelorssc();
+			
+            Boolean bo16 = validateinstitution3();
+			
+			Boolean bo17 = validateyearofgraduation3();
+			
+			Boolean bo18 = validatecgpa3();
+			
 			
 
 			
@@ -366,7 +374,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true) & bo9.equals(true) & bo10.equals(true) & bo11.equals(true) & bo12.equals(true) & bo13.equals(true) & bo14.equals(true) ){
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true) & bo9.equals(true) & bo10.equals(true) & bo11.equals(true) & bo12.equals(true) & bo13.equals(true) & bo14.equals(true) & bo15.equals(true) & bo16.equals(true) & bo17.equals(true) & bo18.equals(true)){
 				
 			
 			try {
@@ -1021,6 +1029,89 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 	}
+	
+	
+	//Validation for A'Level/SSC Information//
+	
+	
+		private boolean validateolevelorssc() {
+			Pattern p=Pattern.compile("([a-z A-Z]+)+");
+			java.util.regex.Matcher m=p.matcher(olevelorssc.getText());
+			if(m.find() && m.group().equals(olevelorssc.getText())) {
+				return true;
+			
+			}else {
+				
+				Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate O'Level or SSC under Graduation Information");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter either of the one O Level or SSC. It should only contain alphabetical words." );
+				alert.showAndWait();
+				
+				return false;
+			}
+			
+		}
+		
+		
+		private boolean validateinstitution3() {
+			Pattern p=Pattern.compile("([a-z A-Z]+)+");
+			java.util.regex.Matcher m=p.matcher(institution3.getText());
+			if(m.find() && m.group().equals(institution3.getText())) {
+				return true;
+			
+			}else {
+				
+				Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate Instituion under O'Level or SSC Information ");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid Institution under O'Level or SSC Information. It should only contain alphabetical words." );
+				alert.showAndWait();
+				
+				return false;
+			}
+			
+		}
+		
+		
+		private boolean validateyearofgraduation3() {
+			Pattern p=Pattern.compile("([0-9]+)+");
+			java.util.regex.Matcher m=p.matcher(yearofgraduation3.getText());
+			if(m.find() && m.group().equals(yearofgraduation3.getText())) {
+				return true;
+			
+			}else {
+				
+				Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate Year of Graduation under  O'Level or SSC Information  ");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid Year of Graduation under O'Level or SSC Information. It should only contain numerical values" );
+				alert.showAndWait();
+				
+				return false;
+			}
+			
+		}
+		
+		
+		private boolean validatecgpa3(){
+			Pattern p=Pattern.compile("[0-9]+[.][0-9]+");
+			java.util.regex.Matcher m=p.matcher(cgpa3.getText());
+			if(m.find() && m.group().equals(cgpa3.getText())) {
+				return true;
+			
+			}else {
+				
+				Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate CGPA under O'Level or HSC Information ");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid CGPA under O'Level or SSC Information . It should contain a value to 2 decimal places" );
+				alert.showAndWait();
+				
+				return false;
+			}
+			
+		}
 	
 
 	
