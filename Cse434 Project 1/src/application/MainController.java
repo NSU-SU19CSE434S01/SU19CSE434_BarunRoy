@@ -347,13 +347,26 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo10 = validatecgpa1();
 			
+			Boolean bo11 = validatealevelorhsc();
+			
+            Boolean bo12 = validateinstitution2();
+			
+			Boolean bo13 = validateyearofgraduation2();
+			
+			Boolean bo14 = validatecgpa2();
+			
+			
+
 			
 			
 			
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true) & bo9.equals(true) & bo10.equals(true)){
+			
+			
+			
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true) & bo9.equals(true) & bo10.equals(true) & bo11.equals(true) & bo12.equals(true) & bo13.equals(true) & bo14.equals(true) ){
 				
 			
 			try {
@@ -850,6 +863,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	//Validation for graduation Information//
 	
+	
 	private boolean validatemajor() {
 		Pattern p=Pattern.compile("([a-z A-Z 0-9]+)+");
 		java.util.regex.Matcher m=p.matcher(major.getText());
@@ -909,7 +923,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	}
 	
 	
-	private boolean validatecgpa1() {
+	private boolean validatecgpa1(){
 		Pattern p=Pattern.compile("[0-9]+[.][0-9]+");
 		java.util.regex.Matcher m=p.matcher(cgpa1.getText());
 		if(m.find() && m.group().equals(cgpa1.getText())) {
@@ -927,6 +941,90 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 	}
+	
+	
+	//Validation for A'Level/SSC Information//
+	
+	
+	private boolean validatealevelorhsc() {
+		Pattern p=Pattern.compile("([a-z A-Z]+)+");
+		java.util.regex.Matcher m=p.matcher(alevelorhsc.getText());
+		if(m.find() && m.group().equals(alevelorhsc.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate A'Level or HSC under Graduation Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter either of the one A Level or HSC. It should only contain alphabetical words." );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	private boolean validateinstitution2() {
+		Pattern p=Pattern.compile("([a-z A-Z]+)+");
+		java.util.regex.Matcher m=p.matcher(institution2.getText());
+		if(m.find() && m.group().equals(institution2.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Instituion under  A'Level or HSC Information ");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Institution under A'Level or HSC Information. It should only contain alphabetical words." );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	private boolean validateyearofgraduation2() {
+		Pattern p=Pattern.compile("([0-9]+)+");
+		java.util.regex.Matcher m=p.matcher(yearofgraduation2.getText());
+		if(m.find() && m.group().equals(yearofgraduation2.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Year of Graduation under  A'Level or HSC Information  ");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Year of Graduation under A'Level or HSC Information. It should only contain numerical values" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	private boolean validatecgpa2(){
+		Pattern p=Pattern.compile("[0-9]+[.][0-9]+");
+		java.util.regex.Matcher m=p.matcher(cgpa2.getText());
+		if(m.find() && m.group().equals(cgpa2.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate CGPA under A'Level or HSC Information ");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid CGPA under A'Level or HSC Information . It should contain a value to 2 decimal places" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+
+	
+	
 	
 	
 	
