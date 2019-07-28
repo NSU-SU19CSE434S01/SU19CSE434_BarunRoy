@@ -135,6 +135,44 @@ class ValidateNametest {
 					assertTrue(result);
 					
 				}
+				
+				
+				//Test for O'Level or SSC Information//
+				
+				@Test
+				void validateolevelorssctest() {
+					MainController junit = new MainController();
+					String result = junit.validateolevelorssc("O Level");
+					assertTrue(result);
+					
+				}
+				
+				
+				@Test
+				void validateinstitution3test() {
+					MainController junit = new MainController();
+					String result = junit.validateinstitution3("MasterMind");
+					assertTrue(result);
+					
+				}
+				
+				
+				@Test
+				void validateyearofgraduation3test() {
+					MainController junit = new MainController();
+					String result = junit.validateyearofgraduation3("2015");
+					assertTrue(result);
+					
+				}
+				
+				
+				@Test
+				void validatecgpa3test() {
+					MainController junit = new MainController();
+					String result = junit.validatecgpa3("4.67");
+					assertTrue(result);
+					
+				}
 		
 		
 		
