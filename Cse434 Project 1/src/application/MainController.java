@@ -339,11 +339,15 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo6 = validatecareerobjective();
 			
+			Boolean bo7 = validatemajor();
+			
+			Boolean bo8 = validateinstitution();
 			
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true)){
+			
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true)){
 				
 			
 			try {
@@ -719,7 +723,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	*/
 	
 	private boolean validatename() {
-		Pattern p=Pattern.compile("[a-zA-Z]+ [a-zA-Z]+");
+		Pattern p=Pattern.compile("([a-z A-Z]+)+");
 		java.util.regex.Matcher m=p.matcher(name.getText());
 		if(m.find() && m.group().equals(name.getText())) {
 			return true;
@@ -820,7 +824,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	private boolean validatecareerobjective() {
-		Pattern p=Pattern.compile("([a-zA-Z]+)+");
+		Pattern p=Pattern.compile("([a-z A-Z]+)+");
 		java.util.regex.Matcher m=p.matcher(careerobjective.getText());
 		if(m.find() && m.group().equals(careerobjective.getText())) {
 			return true;
@@ -837,6 +841,48 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 	}
+	
+	//Validation for graduation Information//
+	
+	private boolean validatemajor() {
+		Pattern p=Pattern.compile("([a-z A-Z 0-9]+)+");
+		java.util.regex.Matcher m=p.matcher(major.getText());
+		if(m.find() && m.group().equals(major.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Major under Graduation Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Major under Graduation Information. It should only contain alphabetical words and numerical values" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	private boolean validateinstitution() {
+		Pattern p=Pattern.compile("([a-z A-Z]+)+");
+		java.util.regex.Matcher m=p.matcher(major.getText());
+		if(m.find() && m.group().equals(major.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Instituion under Graduation Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Institution under Graduation Information. It should only contain alphabetical words." );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	
 	
 	
 	
