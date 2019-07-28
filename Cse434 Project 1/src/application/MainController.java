@@ -341,13 +341,19 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo7 = validatemajor();
 			
-			Boolean bo8 = validateinstitution();
+			Boolean bo8 = validateinstitution1();
+			
+			Boolean bo9 = validateyearofgraduation1();
+			
+			Boolean bo10 = validatecgpa1();
 			
 			
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true)){
+			
+			
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true) & bo7.equals(true) & bo8.equals(true) & bo9.equals(true) & bo10.equals(true)){
 				
 			
 			try {
@@ -863,10 +869,10 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 	}
 	
-	private boolean validateinstitution() {
+	private boolean validateinstitution1() {
 		Pattern p=Pattern.compile("([a-z A-Z]+)+");
-		java.util.regex.Matcher m=p.matcher(major.getText());
-		if(m.find() && m.group().equals(major.getText())) {
+		java.util.regex.Matcher m=p.matcher(institution1.getText());
+		if(m.find() && m.group().equals(institution1.getText())) {
 			return true;
 		
 		}else {
@@ -875,6 +881,46 @@ public class MainController implements EventHandler<ActionEvent> {
 			alert.setTitle("Validate Instituion under Graduation Information");
 			alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid Institution under Graduation Information. It should only contain alphabetical words." );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	
+	private boolean validateyearofgraduation1() {
+		Pattern p=Pattern.compile("([0-9]+)+");
+		java.util.regex.Matcher m=p.matcher(yearofgraduation1.getText());
+		if(m.find() && m.group().equals(yearofgraduation1.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Year of Graduation under Graduation Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Year of Graduation under Graduation Information. It should only contain numerical values" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	
+	private boolean validatecgpa1() {
+		Pattern p=Pattern.compile("[0-9]+[.][0-9]+");
+		java.util.regex.Matcher m=p.matcher(cgpa1.getText());
+		if(m.find() && m.group().equals(cgpa1.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate CGPA under Graduation Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid CGPA under Graduation Information. It should contain a value to 2 decimal places" );
 			alert.showAndWait();
 			
 			return false;
@@ -912,7 +958,7 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 	}
 	
-public void choose_pic(ActionEvent args)throws IOException{
+     public void choose_pic(ActionEvent args)throws IOException{
 		
 		FileChooser fc = new FileChooser();
 	    File selectedFile = fc.showOpenDialog(null);
