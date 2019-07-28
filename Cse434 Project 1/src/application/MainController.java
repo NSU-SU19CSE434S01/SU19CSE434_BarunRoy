@@ -82,6 +82,10 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	
+	
+	
+	
+	
 	@FXML
 	public TextField professionalskills1;
 	@FXML
@@ -333,11 +337,13 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo5 = validatedateofbirth();
 			
+			Boolean bo6 = validatecareerobjective();
 			
 			
 			
 			
-			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true)){
+			
+			if(bo1.equals(true) & bo2.equals(true) & bo3.equals(true) & bo4.equals(true) & bo5.equals(true) & bo6.equals(true)){
 				
 			
 			try {
@@ -811,6 +817,29 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 	}
+	
+	
+	private boolean validatecareerobjective() {
+		Pattern p=Pattern.compile("([a-zA-Z]+)+");
+		java.util.regex.Matcher m=p.matcher(careerobjective.getText());
+		if(m.find() && m.group().equals(careerobjective.getText())) {
+			return true;
+		
+		}else {
+			
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Carer Objective");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Career Objective. It should only contain alphabetical words." );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+	}
+	
+	
+	
 	
 	public void dynamic(ActionEvent args) {
 		
