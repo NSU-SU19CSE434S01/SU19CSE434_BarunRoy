@@ -46,6 +46,18 @@ public class MainControllerTest {
 	}
 	
 	
+	@Test
+	public void testvalidatedateofbirth() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validatedateofbirth("01/07/1996");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	
+	
 	
 	
 
