@@ -200,7 +200,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	public ImageView Im;
 	
 	
-	String a,b;
+	String a,b,c;
 	
 	
 	
@@ -329,13 +329,13 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			String filename="Resume Generator.html";
 			
-			/*Boolean bo = validateTextFields();*/
 			
-			Boolean bo1 = validatename(a);
 			
-			Boolean bo2 = validateaddress(b);
+			Boolean bo1 = validatenameelse();
 			
-			Boolean bo3 = validatemobile();
+			Boolean bo2 = validateaddresselse();
+			
+			Boolean bo3 = validatemobileelse();
 			
 			Boolean bo4 = validateemail();
 			
@@ -727,43 +727,41 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 	}
 	
-	/*
-	private boolean validateTextFields() {
-		if(name.getText().isEmpty() || address.getText().isEmpty() || mobile.getText().isEmpty() || email.getText().isEmpty() || dateofbirth.getText().isEmpty()) {
-			
-			Alert alert=new Alert(AlertType.WARNING);
-			alert.setTitle("Validate Fields");
-			alert.setHeaderText(null);
-			alert.setContentText("Please Enter into all the TextFields under Personal Information.");
-			alert.showAndWait();
-			
-			return false;
-							
-		}
-		
-		return true;
-	}
 	
-	*/
 	
 	public boolean validatename(String a) {
 		Pattern p=Pattern.compile("([a-z A-Z]+)+");
-		java.util.regex.Matcher m=p.matcher(name.getText());
-		if(m.find() && m.group().equals(name.getText())) {
+		java.util.regex.Matcher m=p.matcher(a);
+		if(m.find() && m.group().equals(a)) {
 			return true;
 		
 		}
 		
 		else {
 		
-	        Alert alert=new Alert(AlertType.WARNING);
+			return false;
+		
+		}
+	}
+	
+	public boolean validatenameelse() {
+		
+		if (validatename(name.getText())==false) {
+			
+			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Name under Personal Information");
-			//alert.setHeaderText(null);
+			alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid Name under Personal Information. It should contain only the First Name and the Last Name of your full name. Example: Barun Roy " );
 			alert.showAndWait();
-			
 			return false;
+			
 		}
+		
+		else {
+			
+			return true;
+		}
+		
 		
 	}
 	
@@ -771,11 +769,20 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	public boolean validateaddress(String b) {
 		Pattern p=Pattern.compile("([0-9 a-z A-Z ,-]+)+");
-		java.util.regex.Matcher m=p.matcher(address.getText());
-		if(m.find() && m.group().equals(address.getText())) {
+		java.util.regex.Matcher m=p.matcher(b);
+		if(m.find() && m.group().equals(b)) {
 			return true;
 		
 		}else {
+			
+			return false;
+		}
+		
+	}
+	
+    public boolean validateaddresselse() {
+		
+		if (validateaddress(address.getText())==false) {
 			
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Address under Personal Information");
@@ -784,15 +791,23 @@ public class MainController implements EventHandler<ActionEvent> {
 			alert.showAndWait();
 			
 			return false;
+			
 		}
+		
+		else {
+			
+			return true;
+		}
+		
 		
 	}
 	
 	
-	private boolean validatemobile() {
+	
+    public boolean validatemobile(String c) {
 		Pattern p=Pattern.compile("(88)?[0][0-9]{10}");
-		java.util.regex.Matcher m=p.matcher(mobile.getText());
-		if(m.find() && m.group().equals(mobile.getText())) {
+		java.util.regex.Matcher m=p.matcher(c);
+		if(m.find() && m.group().equals(c)) {
 			return true;
 		
 		}else {
@@ -807,6 +822,31 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 	}
+    
+    
+    public boolean validatemobileelse() {
+		
+		if (validateaddress(address.getText())==false) {
+			Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate Mobile No. under Personal Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid Mobile No. under Personal Information. The mobile no. should start with zero and contain exactly 11 digits(not more not less). Example: 01684919588" );
+			alert.showAndWait();
+			
+			return false;
+		}
+		
+        else {
+			
+			return true;
+		}
+		
+		
+	}
+    
+    
+    
+    
 	
 	
 	private boolean validateemail() {
