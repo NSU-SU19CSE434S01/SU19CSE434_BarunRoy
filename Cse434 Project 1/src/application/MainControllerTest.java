@@ -56,6 +56,18 @@ public class MainControllerTest {
 	}
 	
 	
+	@Test
+	public void testvalidatedatecareerobjective() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validatecareerobjective("To work in a legal way");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	
+	
 	
 	
 	

@@ -341,7 +341,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo5 = validatedateofbirthelse();
 			
-			Boolean bo6 = validatecareerobjective();
+			Boolean bo6 = validatecareerobjectiveelse();
 			
 			Boolean bo7 = validatemajor();
 			
@@ -825,7 +825,7 @@ public class MainController implements EventHandler<ActionEvent> {
     
     public boolean validatemobileelse() {
 		
-		if (validateaddress(mobile.getText())==false) {
+		if (validatemobile(mobile.getText())==false) {
 			
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Mobile No. under Personal Information");
@@ -860,7 +860,7 @@ public class MainController implements EventHandler<ActionEvent> {
     
     public boolean validateemailelse(){
     	
-    	if (validateaddress(email.getText())==false) {
+    	if (validateemail(email.getText())==false) {
     		
     		Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate E-mail under Personal Information");
@@ -895,7 +895,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	 public boolean validatedateofbirthelse(){
 	    	
-	    	if (validateaddress(dateofbirth.getEditor().getText())==false) {
+	    	if (validatedateofbirth(dateofbirth.getEditor().getText())==false) {
 	    		
 	    		Alert alert=new Alert(AlertType.WARNING);
 				alert.setTitle("Validate Date of Birth under Personal Information");
@@ -915,24 +915,40 @@ public class MainController implements EventHandler<ActionEvent> {
 	    }
 	
 	
-	private boolean validatecareerobjective() {
+	public boolean validatecareerobjective(String f) {
 		Pattern p=Pattern.compile("([a-z A-Z]+)+");
-		java.util.regex.Matcher m=p.matcher(careerobjective.getText());
-		if(m.find() && m.group().equals(careerobjective.getText())) {
+		java.util.regex.Matcher m=p.matcher(f);
+		if(m.find() && m.group().equals(f)) {
 			return true;
 		
 		}else {
-			
-			Alert alert=new Alert(AlertType.WARNING);
-			alert.setTitle("Validate Carer Objective");
-			alert.setHeaderText(null);
-			alert.setContentText("Please Enter a Valid Career Objective. It should only contain alphabetical words." );
-			alert.showAndWait();
 			
 			return false;
 		}
 		
 	}
+	
+	 public boolean validatecareerobjectiveelse(){
+	    	
+	    	if (validatecareerobjective(careerobjective.getText())==false) {
+	    		
+	    		Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate Carer Objective");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid Career Objective. It should only contain alphabetical words." );
+				alert.showAndWait();
+				
+				return false;
+		    
+	    	}
+	    	
+	        else {
+				
+				return true;
+			}
+	    	
+	    }
+	
 	
 	//Validation for graduation Information//
 	
