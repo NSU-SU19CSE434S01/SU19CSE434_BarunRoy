@@ -36,5 +36,17 @@ public class MainControllerTest {
 	}
 	
 	
+	@Test
+	public void testvalidateemail() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validateemail("roybarun36@gmail.com");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	
+	
 
 }

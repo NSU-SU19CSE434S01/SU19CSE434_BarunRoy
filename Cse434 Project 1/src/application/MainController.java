@@ -337,7 +337,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo3 = validatemobileelse();
 			
-			Boolean bo4 = validateemail();
+			Boolean bo4 = validateemailelse();
 			
 			Boolean bo5 = validatedateofbirth();
 			
@@ -823,10 +823,10 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 	}
     
-    
     public boolean validatemobileelse() {
 		
-		if (validateaddress(address.getText())==false) {
+		if (validateaddress(mobile.getText())==false) {
+			
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Mobile No. under Personal Information");
 			alert.setHeaderText(null);
@@ -845,14 +845,10 @@ public class MainController implements EventHandler<ActionEvent> {
 	}
     
     
-    
-    
-	
-	
-	private boolean validateemail() {
+    public boolean validateemail(String d) {
 		Pattern p=Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
-		java.util.regex.Matcher m=p.matcher(email.getText());
-		if(m.find() && m.group().equals(email.getText())) {
+		java.util.regex.Matcher m=p.matcher(d);
+		if(m.find() && m.group().equals(d)) {
 			return true;
 		
 		}else {
@@ -867,6 +863,29 @@ public class MainController implements EventHandler<ActionEvent> {
 		}
 		
 	}
+    
+    public boolean validateemailelse(){
+    	
+    	if (validateaddress(email.getText())==false) {
+    		
+    		Alert alert=new Alert(AlertType.WARNING);
+			alert.setTitle("Validate E-mail under Personal Information");
+			alert.setHeaderText(null);
+			alert.setContentText("Please Enter a Valid E-mail under Personal Information. Example: roybarun36@gmail.com. Please follow the format of Example and no space between alphabets or numbers" );
+			alert.showAndWait();
+			
+			return false;
+	    
+    	}
+    	
+        else {
+			
+			return true;
+		}
+    	
+    }
+    
+    
 	
 	
 	private boolean validatedateofbirth() {
