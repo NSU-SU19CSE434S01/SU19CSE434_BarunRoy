@@ -49,7 +49,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	@FXML
 	public HBox nextpersonalskill[] = new HBox[20];
-	
+	 
 	@FXML
 	public VBox dyvbox1;
 	
@@ -200,7 +200,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	public ImageView Im;
 	
 	
-	
+	String a;
 	
 	
 	
@@ -327,7 +327,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			/*Boolean bo = validateTextFields();*/
 			
-			Boolean bo1 = validatename();
+			Boolean bo1 = validatename(a);
 			
 			Boolean bo2 = validateaddress();
 			
@@ -742,17 +742,19 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	*/
 	
-	private boolean validatename() {
+	public boolean validatename(String a) {
 		Pattern p=Pattern.compile("([a-z A-Z]+)+");
 		java.util.regex.Matcher m=p.matcher(name.getText());
 		if(m.find() && m.group().equals(name.getText())) {
 			return true;
 		
-		}else {
-			
-			Alert alert=new Alert(AlertType.WARNING);
+		}
+		
+		else {
+		
+	        Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Name under Personal Information");
-			alert.setHeaderText(null);
+			//alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid Name under Personal Information. It should contain only the First Name and the Last Name of your full name. Example: Barun Roy " );
 			alert.showAndWait();
 			
@@ -764,7 +766,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	private boolean validateaddress() {
-		Pattern p=Pattern.compile("[0-9]+[,] [a-zA-Z0-9]+[,] [a-zA-Z]+");
+		Pattern p=Pattern.compile("([0-9 a-z A-Z ,-]+)+");
 		java.util.regex.Matcher m=p.matcher(address.getText());
 		if(m.find() && m.group().equals(address.getText())) {
 			return true;
