@@ -200,7 +200,11 @@ public class MainController implements EventHandler<ActionEvent> {
 	public ImageView Im;
 	
 	
-	String a;
+	String a,b;
+	
+	
+	
+	
 	
 	
 	
@@ -329,7 +333,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo1 = validatename(a);
 			
-			Boolean bo2 = validateaddress();
+			Boolean bo2 = validateaddress(b);
 			
 			Boolean bo3 = validatemobile();
 			
@@ -765,7 +769,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	
-	private boolean validateaddress() {
+	public boolean validateaddress(String b) {
 		Pattern p=Pattern.compile("([0-9 a-z A-Z ,-]+)+");
 		java.util.regex.Matcher m=p.matcher(address.getText());
 		if(m.find() && m.group().equals(address.getText())) {
@@ -776,7 +780,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Address under Personal Information");
 			alert.setHeaderText(null);
-			alert.setContentText("Please Enter a Valid Address under Personal Information. The Address should be in this format(Road Number, Name of your Area, Name of your City). Example: 32, Kalabgan, Dhaka. Please give the commas and the spacings as given in the format and example." );
+			alert.setContentText("Please Enter a Valid Address under Personal Information. The Address should be in this format(Road Number, Name of your Area, Name of your City). Example: 32, Kalabgan, Dhaka-1205." );
 			alert.showAndWait();
 			
 			return false;
