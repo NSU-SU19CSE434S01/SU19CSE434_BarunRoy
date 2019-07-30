@@ -146,6 +146,48 @@ public class MainControllerTest {
 	}
 	
 	
+	@Test
+	public void testvalidatedateolevelorssc() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validateolevelorssc("O Level");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	@Test
+	public void testvalidatedateinstitution3() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validateinstitution3("Academia");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	@Test
+	public void testvalidatedateyearofgraduation3() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validateyearofgraduation3("2013");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	@Test
+	public void testvalidatedatecgpa3() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validatecgpa3("5.00");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	
+	
 	
 	
 	
