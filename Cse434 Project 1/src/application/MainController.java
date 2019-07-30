@@ -1419,14 +1419,6 @@ public class MainController implements EventHandler<ActionEvent> {
 	    }
 	
 
-	
-	
-	
-	
-	
-	
-	
-	
 	public void dynamic(ActionEvent args) {
 		
 		if(args.getSource()==Newpersonalskill) { 

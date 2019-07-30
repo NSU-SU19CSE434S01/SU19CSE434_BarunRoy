@@ -4,26 +4,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-public class MainControllerTest {
+public class MainControllerTest {                                                                     //Input Space Partitioning//                    
 
-	@Test
-	public void testvalidatename() {
-		MainController controller = new MainController();
-		boolean actualValue = controller.validatename("Shihab Ahmed");
-		boolean expectedValue = true;
+	@Test                                                                                             // 1a) Whether the name is empty                              1b) Size of name                                            1c) Whether the name contains null entries             
+	public void testvalidatename() {                                                             
+		MainController controller = new MainController();                                             //   -a1:true (Value = [])                                  -b1: 0 (Value=[])                                                -c1: true (Values=[null],[null,["Adnin"],[null])
+		boolean actualValue = controller.validatename("Barun Roy");
+		boolean expectedValue = true;                                                                 //   -a2:false (Values = ["Barun Roy", "Maliha Alam"]      -b2: 1 (Values=[Shihab])                                          -c2: false (Values = ["Arefin Rafi", "Ahmed Jawad"]                                  
 		assertEquals(expectedValue,actualValue);
-		
+		                                                                                              //                                                          -b3: more than 1 (Values = ["Arefin Rafi", "Ahmed Jawad"]    
 	}
 	
 	
-	@Test
+	@Test                                                                                             // 2a) Whether the address is empty                              2b) Size of address                                        2c) Whether the address contains null entries                                            
 	public void testvalidateaddress() {
 		MainController controller = new MainController();
-		boolean actualValue = controller.validateaddress("32, Lake Circus,Kalabagan, Dhaka-1205");
-		boolean expectedValue = true;
-		assertEquals(expectedValue,actualValue);
-		
-	}
+		boolean actualValue = controller.validateaddress("32, Lake Circus,Kalabagan, Dhaka-1205");    //   -a1:true (Value = [])                                      -b1: 0 (Value=[])                                            -c1: true (Values=[null],[null,["Uttara"],[null]) 
+		boolean expectedValue = true;                                                                 
+		assertEquals(expectedValue,actualValue);                                                      //   -a2:false (Values = ["27,Dhanmondi", "10,Mirpur"]          -b2: 1 (Values=[Mirpur])                                     -c2: false (Values = ["Mirpur", "Mohammadpur"]                       
+		                                                                                              
+	}                                                                                                 //                                                              -b3: more than 1 (Values = ["Lake Circus,Kalabagan"]           
 	
 	
 	@Test
