@@ -66,6 +66,16 @@ public class MainControllerTest {
 	}
 	
 	
+	@Test
+	public void testvalidatedatemajor() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validatemajor("CSE");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
 	
 	
 	

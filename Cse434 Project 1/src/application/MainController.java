@@ -343,7 +343,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo6 = validatecareerobjectiveelse();
 			
-			Boolean bo7 = validatemajor();
+			Boolean bo7 = validatemajorelse();
 			
 			Boolean bo8 = validateinstitution1();
 			
@@ -953,24 +953,41 @@ public class MainController implements EventHandler<ActionEvent> {
 	//Validation for graduation Information//
 	
 	
-	private boolean validatemajor() {
+	public boolean validatemajor(String g) {
 		Pattern p=Pattern.compile("([a-z A-Z 0-9]+)+");
-		java.util.regex.Matcher m=p.matcher(major.getText());
-		if(m.find() && m.group().equals(major.getText())) {
+		java.util.regex.Matcher m=p.matcher(g);
+		if(m.find() && m.group().equals(g)) {
 			return true;
 		
 		}else {
-			
-			Alert alert=new Alert(AlertType.WARNING);
-			alert.setTitle("Validate Major under Graduation Information");
-			alert.setHeaderText(null);
-			alert.setContentText("Please Enter a Valid Major under Graduation Information. It should only contain alphabetical words and numerical values" );
-			alert.showAndWait();
 			
 			return false;
 		}
 		
 	}
+	
+	 public boolean validatemajorelse(){
+	    	
+	    	if (validatemajor(major.getText())==false) {
+	    		
+	    		Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate Major under Graduation Information");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid Major under Graduation Information. It should only contain alphabetical words and numerical values" );
+				alert.showAndWait();
+				
+				
+				return false;
+		    
+	    	}
+	    	
+	        else {
+				
+				return true;
+			}
+	    	
+	    }
+	
 	
 	private boolean validateinstitution1() {
 		Pattern p=Pattern.compile("([a-z A-Z]+)+");
