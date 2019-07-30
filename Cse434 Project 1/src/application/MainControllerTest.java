@@ -120,7 +120,7 @@ public class MainControllerTest {
    //  -a2:false (Values = ["01684919588", "01687129704"]  
 	
 
-	//  1b) Size of mobile 
+	//  1b) Size of mobile no. 
 
  //   -b1: 0 (Value=[])
 	
@@ -129,7 +129,7 @@ public class MainControllerTest {
 	//  -b3: more than 1 (Values = ["01684919587", "01684913456"]
 	
 	
-	//  1c) Whether the name contains null entries             
+	//  1c) Whether the mobile no. contains null entries             
                                                        
  //  -c1: true (Values=[null],[null,["01714567876"],[null])
 		
@@ -289,7 +289,45 @@ public class MainControllerTest {
 		boolean expectedValue = true;
 		assertEquals(expectedValue,actualValue);													
 		
-	}																								
+	}
+	
+//Input Space Partitioning  for testvalidatemajor//
+	
+    //  1a) Whether the major is empty  
+	
+   //  -a1:true (Value = [])
+	
+   //  -a2:false (Values = ["CSE", "BBA"]  
+	
+
+	//  1b) Size of major 
+
+ //   -b1: 0 (Value=[])
+	
+	//  -b2: 1 (Values=[ENV])
+	
+	//  -b3: more than 1 (Values = ["CSE", "EEE"]
+	
+	
+	//  1c) Whether the major contains null entries             
+                                                       
+ //  -c1: true (Values=[null],[null,["ENV"],[null])
+		
+ // -c2: false (Values = ["EEE", "BBA"]
+	
+	
+               //Graph Coverage for validatemajor//
+	
+    //                                 (1) 
+	//        if the pattern matches   / \  If the pattern does not match
+    //        with the user input     /   \  with the user input
+	//                              (2)   (3) 
+		
+	                   //  Node Coverage= {1,2,3}
+	                 //  Edge Coverage= {(1,2),(1,3)}
+	
+	
+	
 	
 	
 	@Test
@@ -299,7 +337,45 @@ public class MainControllerTest {
 		boolean expectedValue = true;
 		assertEquals(expectedValue,actualValue);													
 		
-	}																								
+	}
+	
+//Input Space Partitioning  for testvalidateinstitution1//
+	
+    //  1a) Whether the institution1 is empty  
+	
+   //  -a1:true (Value = [])
+	
+   //  -a2:false (Values = ["NSU", "Brac"]  
+	
+
+	//  1b) Size of institution1
+
+ //   -b1: 0 (Value=[])
+	
+	//  -b2: 1 (Values=[IUB])
+	
+	//  -b3: more than 1 (Values = ["NSU", "EWU"]
+	
+	
+	//  1c) Whether the institution1 contains null entries             
+                                                       
+ //  -c1: true (Values=[null],[null,["AIUB"],[null])
+		
+ // -c2: false (Values = ["IUB", "NSU"]
+	
+	
+               //Graph Coverage for validateinstitution1//
+	
+    //                                 (1) 
+	//        if the pattern matches   / \  If the pattern does not match
+    //        with the user input     /   \  with the user input
+	//                              (2)   (3) 
+		
+	                   //  Node Coverage= {1,2,3}
+	                 //  Edge Coverage= {(1,2),(1,3)}
+	
+	
+	
 	
 	
 	@Test
@@ -309,7 +385,45 @@ public class MainControllerTest {
 		boolean expectedValue = true;
 		assertEquals(expectedValue,actualValue);													
 			
-	}																								
+	}
+	
+//Input Space Partitioning  for testvalidateyearofgraduation1//
+	
+    //  1a) Whether the yearofgraduation1 is empty  
+	
+   //  -a1:true (Value = [])
+	
+   //  -a2:false (Values = ["2015", "1996"]  
+	
+
+	//  1b) Size of yearofgraduation1
+
+ //   -b1: 0 (Value=[])
+	
+	//  -b2: 1 (Values=[2019])
+	
+	//  -b3: more than 1 (Values = ["1996", "2018"]
+	
+	
+	//  1c) Whether the yearofgraduation1 contains null entries             
+                                                       
+ //  -c1: true (Values=[null],[null,["2017"],[null])
+		
+ // -c2: false (Values = ["1997", "2017"]
+	
+	
+               //Graph Coverage for validateyearofgraduation1//
+	
+    //                                 (1) 
+	//        if the pattern matches   / \  If the pattern does not match
+    //        with the user input     /   \  with the user input
+	//                              (2)   (3) 
+		
+	                   //  Node Coverage= {1,2,3}
+	                 //  Edge Coverage= {(1,2),(1,3)}
+	
+	
+	
 	
 	
 	@Test
@@ -319,7 +433,43 @@ public class MainControllerTest {
 		boolean expectedValue = true;														
 		assertEquals(expectedValue,actualValue);													
 		
-	}																									
+	}
+	
+//Input Space Partitioning  for testvalidatecgpa1//
+	
+    //  1a) Whether the cgpa1 is empty  
+	
+   //  -a1:true (Value = [])
+	
+   //  -a2:false (Values = ["2.23", "3.35"]  
+	
+
+	//  1b) Size of cgpa1
+
+   //   -b1: 0 (Value=[])
+	
+	//  -b2: 1 (Values=[4.00])
+	
+	//  -b3: more than 1 (Values = ["2.67", "3.39"]
+	
+	
+	//  1c) Whether the cgpa1 contains null entries             
+                                                       
+ //  -c1: true (Values=[null],[null,["3.67"],[null])
+		
+ // -c2: false (Values = ["3.78", "3.89"]
+	
+	
+               //Graph Coverage for validatecgpa1//
+	
+    //                                 (1) 
+	//        if the pattern matches   / \  If the pattern does not match
+    //        with the user input     /   \  with the user input
+	//                              (2)   (3) 
+		
+	                   //  Node Coverage= {1,2,3}
+	                 //  Edge Coverage= {(1,2),(1,3)}
+	
 	
 	
 	@Test

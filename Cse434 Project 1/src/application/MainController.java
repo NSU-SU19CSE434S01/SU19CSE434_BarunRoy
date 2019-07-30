@@ -9,12 +9,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.regex.Pattern;
-
-
-
-
-//import com.sun.prism.Image;
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,8 +19,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 
 public class MainController implements EventHandler<ActionEvent> {
@@ -47,31 +39,9 @@ public class MainController implements EventHandler<ActionEvent> {
 	@FXML
 	public TextField careerobjective;
 	
-	@FXML
-	public HBox nextpersonalskill[] = new HBox[20];
-	 
-	@FXML
-	public VBox dyvbox1;
-	
-	
-	
 	
 	@FXML
-	public TextField textfield1[] = new TextField[20];
-	public static String tex[]   = new String[20];
-	
-	
-	
-	
-	
-	int i=0;
-	
-	int last=0;
-	
-	int j=0;
-	
-	@FXML
-	String fp,lp,mp,n,l;
+	String fp,lp;
 	
 	
 	@FXML
@@ -191,24 +161,12 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	
-	@FXML
-	public Button Newpersonalskill;
 	
 	@FXML
 	public Button Resumepicture;
 	
 	@FXML
 	public ImageView Im;
-	
-	
-	String a,b,c;
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	@FXML
@@ -219,12 +177,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	@FXML
 	String na,ad,mo,em,da,ca,pr1,pr2,pr3,pr4,pr5,pr6,pe1,pe2,pe3,pe4,pe5,pe6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
 	
-	
-	//To dynamically add TextFields for personal skills//
-	
-	public void newpersonalskill(ActionEvent args) {
-		Newpersonalskill.setOnAction(this);
-	}
+	public String file_name,Fk;
 	
 	
 	public void press(ActionEvent args) {
@@ -234,7 +187,6 @@ public class MainController implements EventHandler<ActionEvent> {
 	public void resumepicture(ActionEvent args) {
 		Resumepicture.setOnAction(this);
 	}
-	
 	
 	
 	
@@ -538,7 +490,7 @@ public class MainController implements EventHandler<ActionEvent> {
 						"  <div class=\"container\">\r\n" + 
 						"    <div class=\"header\">\r\n" + 
 						"      <div>\r\n" + 
-						"        <div><img src=\"Photo.jpg\" alt=\"avatar\" class=\"avatar\"></div>\r\n" + 
+						"        <div><img src=\""+Fk+"\" alt=\"avatar\" class=\"avatar\"></div>\r\n" + 
 						"      </div>\r\n" + 
 						"      <div class=\"title-holder\">\r\n" + 
 						"        <div class=\"name\">"+na+"</div>\r\n" + 
@@ -699,16 +651,11 @@ public class MainController implements EventHandler<ActionEvent> {
 						"</html>\r\n" + 
 						"\r\n" + 
 						"\r\n";
-						outputStream.println(fp+mp+lp);
+						outputStream.println(fp+lp);
 		                
 								                
 		            
-		                String mp=null,n;
-		                for(i=0;i<last;i++) {
-		                	n="<h1>" + textfield1[i].getText()+"<h1>";
-		                	mp=mp+n;
-		                	
-		                }
+		               
 		               
 				
 				outputStream.close();
@@ -1065,7 +1012,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	public boolean validatecgpa1(String j){
-		Pattern p=Pattern.compile("[0-9][.][0-9][0-9]");
+		Pattern p=Pattern.compile("[0-4][.][0-9][0-9]");
 		java.util.regex.Matcher m=p.matcher(j);
 		if(m.find() && m.group().equals(j)) {
 			return true;
@@ -1209,7 +1156,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	public boolean validatecgpa2(String n){
-		Pattern p=Pattern.compile("[0-9][.][0-9][0-9]");
+		Pattern p=Pattern.compile("[0-5][.][0-9][0-9]");
 		java.util.regex.Matcher m=p.matcher(n);
 		if(m.find() && m.group().equals(n)) {
 			return true;
@@ -1353,7 +1300,7 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 		
 		public boolean validatecgpa3(String r){
-			Pattern p=Pattern.compile("[0-9][.][0-9][0-9]");
+			Pattern p=Pattern.compile("[0-5][.][0-9][0-9]");
 			java.util.regex.Matcher m=p.matcher(r);
 			if(m.find() && m.group().equals(r)) {
 				return true;
@@ -1423,48 +1370,54 @@ public class MainController implements EventHandler<ActionEvent> {
 	    }
 	
 
-	public void dynamic(ActionEvent args) {
-		
-		if(args.getSource()==Newpersonalskill) { 
-		if(i<7) {
-			
-			
-				
-				textfield1[i] = new TextField();
-				textfield1[i].getStyleClass().add("dy-text");
-				
-				textfield1[i].setPromptText("Add a skill");
-				
-				dyvbox1.getChildren().addAll(textfield1[i]);
-				dyvbox1.setSpacing(20);
-				
-				i=i+1;
-				last =i;
-			}
-			
-			else { }
-		
-		}
-		
-	}
 	
-     public void choose_pic(ActionEvent args)throws IOException{
+     public void picture_select(ActionEvent args)throws IOException{
 		
 		FileChooser fc = new FileChooser();
+		
 	    File selectedFile = fc.showOpenDialog(null);
-	    String working_dir = System.getProperty("user.dir");
 	    
-	    working_dir = working_dir+ "\\";
-	    String path = selectedFile.getAbsolutePath();
+	    String current_folder = System.getProperty("user.dir");
 	    
-	    working_dir = working_dir.replace("\\", "\\\\");
+	    current_folder = current_folder+ "\\";
 	    
-	    working_dir = working_dir+"Barun.png";
-	    System.out.println(working_dir);
+	    String file_path = selectedFile.getAbsolutePath();
+	    
+	    String name_pic = selectedFile.getName();
+		
+		String temp = "";
+		
+	    
+	    
+	    for (int i = name_pic.length()-1; i >= 0; i--) {
+			
+			if(name_pic.charAt(i)!='.') {
+				
+				temp += name_pic.charAt(i);
+				
+			}
+			else
+				
+				break;
+			
+		}
+		
+		StringBuffer filetype = new StringBuffer(temp);
+		
+	    filetype.reverse();
+
+	    current_folder = current_folder.replace("\\", "\\\\");
+		
+		current_folder = current_folder+"user."+filetype;
+		
+		file_name = "user."+filetype;
+		Fk = file_name;
+		System.out.println(file_name);
+
 	    
 	    try {
-	    	FileInputStream in = new FileInputStream(path);
-	    	FileOutputStream out = new FileOutputStream(working_dir);
+	    	FileInputStream in = new FileInputStream(file_path);
+	    	FileOutputStream out = new FileOutputStream(current_folder);
 	    	
 	    	BufferedInputStream bin = new BufferedInputStream(in);
 	    	BufferedOutputStream bout = new BufferedOutputStream(out);
@@ -1484,20 +1437,13 @@ public class MainController implements EventHandler<ActionEvent> {
 	    	System.out.println("Failed to copy");
 	    }
 	    
-	    File file1 = new File("barun.png");
+	    File file1 = new File(file_name);
 	    Image image=new Image(file1.toURI().toString());
 	    Im.setImage(image);
 	    
 	    
 		
-	}
-	
-	
-	
-	
-	
-	 
-	
+	}	
 	
 	
 }
