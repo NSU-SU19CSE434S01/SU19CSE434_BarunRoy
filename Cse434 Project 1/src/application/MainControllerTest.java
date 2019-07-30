@@ -186,6 +186,16 @@ public class MainControllerTest {
 	}
 	
 	
+	@Test
+	public void testvalidatedatepersonalassessment() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validatepersonalassessment("To work honestly");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
 	
 	
 	

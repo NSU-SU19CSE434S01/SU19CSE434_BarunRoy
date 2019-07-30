@@ -367,7 +367,7 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo18 = validatecgpa3else();
 			
-			Boolean bo19 = validatepersonalassessment();
+			Boolean bo19 = validatepersonalassessmentelse();
 			
 			
 
@@ -1384,24 +1384,39 @@ public class MainController implements EventHandler<ActionEvent> {
 		
 		
 		
-		private boolean validatepersonalassessment() {
+		public boolean validatepersonalassessment(String s) {
 			Pattern p=Pattern.compile("([a-z A-Z]+)+");
-			java.util.regex.Matcher m=p.matcher(personalassessment.getText());
-			if(m.find() && m.group().equals(personalassessment.getText())) {
+			java.util.regex.Matcher m=p.matcher(s);
+			if(m.find() && m.group().equals(s)) {
 				return true;
 			
 			}else {
-				
-				Alert alert=new Alert(AlertType.WARNING);
-				alert.setTitle("Validate personalassessment");
-				alert.setHeaderText(null);
-				alert.setContentText("Please Enter a Valid Personal Assessment. It should only contain alphabetical words." );
-				alert.showAndWait();
 				
 				return false;
 			}
 			
 		}
+		
+        public boolean validatepersonalassessmentelse(){
+	    	
+	    	if (validatepersonalassessment(personalassessment.getText())==false) {
+	    		
+	    		Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate personalassessment");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid Personal Assessment. It should only contain alphabetical words." );
+				alert.showAndWait();			    
+				
+				return false;
+		    
+	    	}
+	    	
+	        else {
+				
+				return true;
+			}
+	    	
+	    }
 	
 
 	
