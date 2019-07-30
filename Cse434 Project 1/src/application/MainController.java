@@ -345,11 +345,11 @@ public class MainController implements EventHandler<ActionEvent> {
 			
 			Boolean bo7 = validatemajorelse();
 			
-			Boolean bo8 = validateinstitution1();
+			Boolean bo8 = validateinstitution1else();
 			
-			Boolean bo9 = validateyearofgraduation1();
+			Boolean bo9 = validateyearofgraduation1else();
 			
-			Boolean bo10 = validatecgpa1();
+			Boolean bo10 = validatecgpa1else();
 			
 			Boolean bo11 = validatealevelorhsc();
 			
@@ -989,64 +989,111 @@ public class MainController implements EventHandler<ActionEvent> {
 	    }
 	
 	
-	private boolean validateinstitution1() {
+	public boolean validateinstitution1(String h) {
 		Pattern p=Pattern.compile("([a-z A-Z]+)+");
-		java.util.regex.Matcher m=p.matcher(institution1.getText());
-		if(m.find() && m.group().equals(institution1.getText())) {
+		java.util.regex.Matcher m=p.matcher(h);
+		if(m.find() && m.group().equals(h)) {
 			return true;
 		
 		}else {
-			
-			Alert alert=new Alert(AlertType.WARNING);
-			alert.setTitle("Validate Instituion under Graduation Information");
-			alert.setHeaderText(null);
-			alert.setContentText("Please Enter a Valid Institution under Graduation Information. It should only contain alphabetical words." );
-			alert.showAndWait();
 			
 			return false;
 		}
 		
 	}
 	
+	 public boolean validateinstitution1else(){
+	    	
+	    	if (validateinstitution1(institution1.getText())==false) {
+	    		
+	    		Alert alert=new Alert(AlertType.WARNING);
+				alert.setTitle("Validate Instituion under Graduation Information");
+				alert.setHeaderText(null);
+				alert.setContentText("Please Enter a Valid Institution under Graduation Information. It should only contain alphabetical words." );
+				alert.showAndWait();
+				
+			    return false;
+		    
+	    	}
+	    	
+	        else {
+				
+				return true;
+			}
+	    	
+	    }
 	
-	private boolean validateyearofgraduation1() {
+	
+	
+	public boolean validateyearofgraduation1(String i) {
 		Pattern p=Pattern.compile("([0-9]+)+");
-		java.util.regex.Matcher m=p.matcher(yearofgraduation1.getText());
-		if(m.find() && m.group().equals(yearofgraduation1.getText())) {
+		java.util.regex.Matcher m=p.matcher(i);
+		if(m.find() && m.group().equals(i)) {
 			return true;
 		
 		}else {
 			
-			Alert alert=new Alert(AlertType.WARNING);
+			return false;
+		}
+		
+	}
+	
+	public boolean validateyearofgraduation1else(){
+    	
+    	if (validateyearofgraduation1(yearofgraduation1.getText())==false) {
+    		
+    		Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate Year of Graduation under Graduation Information");
 			alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid Year of Graduation under Graduation Information. It should only contain numerical values" );
 			alert.showAndWait();
 			
+		    return false;
+	    
+    	}
+    	
+        else {
+			
+			return true;
+		}
+    	
+    }
+	
+	
+	public boolean validatecgpa1(String j){
+		Pattern p=Pattern.compile("[0-9]+[.][0-9]+");
+		java.util.regex.Matcher m=p.matcher(j);
+		if(m.find() && m.group().equals(j)) {
+			return true;
+		
+		}else {
+			
 			return false;
 		}
 		
 	}
 	
-	
-	private boolean validatecgpa1(){
-		Pattern p=Pattern.compile("[0-9]+[.][0-9]+");
-		java.util.regex.Matcher m=p.matcher(cgpa1.getText());
-		if(m.find() && m.group().equals(cgpa1.getText())) {
-			return true;
-		
-		}else {
-			
-			Alert alert=new Alert(AlertType.WARNING);
+    public boolean validatecgpa1else(){
+    	
+    	if (validatecgpa1(cgpa1.getText())==false) {
+    		
+    		Alert alert=new Alert(AlertType.WARNING);
 			alert.setTitle("Validate CGPA under Graduation Information");
 			alert.setHeaderText(null);
 			alert.setContentText("Please Enter a Valid CGPA under Graduation Information. It should contain a value to 2 decimal places" );
 			alert.showAndWait();
 			
-			return false;
+		    return false;
+	    
+    	}
+    	
+        else {
+			
+			return true;
 		}
-		
-	}
+    	
+    }
+
 	
 	
 	//Validation for A'Level/SSC Information//

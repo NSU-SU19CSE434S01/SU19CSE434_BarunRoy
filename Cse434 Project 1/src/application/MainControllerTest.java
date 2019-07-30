@@ -76,6 +76,37 @@ public class MainControllerTest {
 	}
 	
 	
+	@Test
+	public void testvalidatedateinstitution1() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validateinstitution1("North South University");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	@Test
+	public void testvalidatedateyearofgraduation1() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validateyearofgraduation1("2019");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	@Test
+	public void testvalidatedatecgpa1() {
+		MainController controller = new MainController();
+		boolean actualValue = controller.validatecgpa1("3.75");
+		boolean expectedValue = true;
+		assertEquals(expectedValue,actualValue);
+		
+	}
+	
+	
+	
 	
 	
 	
