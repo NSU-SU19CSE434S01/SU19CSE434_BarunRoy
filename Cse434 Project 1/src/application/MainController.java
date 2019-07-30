@@ -74,18 +74,6 @@ public class MainController implements EventHandler<ActionEvent> {
 	String fp,lp,mp,n,l;
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	@FXML
 	public TextField professionalskills1;
 	@FXML
@@ -98,6 +86,19 @@ public class MainController implements EventHandler<ActionEvent> {
 	public TextField professionalskills5;
 	@FXML
 	public TextField professionalskills6;
+	
+	@FXML
+	public TextField personalskills1;
+	@FXML
+	public TextField personalskills2;
+	@FXML
+	public TextField personalskills3;
+	@FXML
+	public TextField personalskills4;
+	@FXML
+	public TextField personalskills5;
+	@FXML
+	public TextField personalskills6;
 	
 	/*Graduation Information*/
 	
@@ -216,7 +217,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	
 	@FXML
-	String na,ad,mo,em,da,ca,pr1,pr2,pr3,pr4,pr5,pr6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
+	String na,ad,mo,em,da,ca,pr1,pr2,pr3,pr4,pr5,pr6,pe1,pe2,pe3,pe4,pe5,pe6,ma,in1,ye1,cg1,al,in2,ye2,cg2,ol,in3,ye3,cg3,de,co,wo,ac1,ac2,coe1,coe2,com1,com2,per,na2,de2,co2,em2,ph2;
 	
 	
 	//To dynamically add TextFields for personal skills//
@@ -254,14 +255,19 @@ public class MainController implements EventHandler<ActionEvent> {
 			String ca=careerobjective.getText();
 			
 		
-
-			
 			String pr1=professionalskills1.getText();
 			String pr2=professionalskills2.getText();
 			String pr3=professionalskills3.getText();
 			String pr4=professionalskills4.getText();
 			String pr5=professionalskills5.getText();
 			String pr6=professionalskills6.getText();
+			
+			String pe1=personalskills1.getText();
+			String pe2=personalskills2.getText();
+			String pe3=personalskills3.getText();
+			String pe4=personalskills4.getText();
+			String pe5=personalskills5.getText();
+			String pe6=personalskills6.getText();
 			
 			
 			/*Graduation Information*/
@@ -557,14 +563,12 @@ public class MainController implements EventHandler<ActionEvent> {
 						"          <div class=\"lists\">\r\n" + 
 						"            <h2>Personal Skills</h2>\r\n" + 
 						"            <ul>\r\n" + 
-						"              <li>     </li>\r\n" + 
-						"              <li>     </li>\r\n" + 
-						"              <li>     </li>\r\n" + 
-						"              <li>     </li>\r\n" + 
-						"              <li>     </li>\r\n" + 
-						"              <li>     </li>\r\n" +
-						"              <li>     </li>\r\n" +
-						"              <li>     </li>\r\n" +
+						"              <li> "+pe1+" </li>\r\n" + 
+						"              <li> "+pe2+" </li>\r\n" + 
+						"              <li> "+pe3+" </li>\r\n" + 
+						"              <li> "+pe4+" </li>\r\n" + 
+						"              <li> "+pe5+" </li>\r\n" + 
+						"              <li> "+pe6+" </li>\r\n" +
 						"            </ul>\r\n" + 
 						"          </div>\r\n" + 
 						"\r\n" + 
