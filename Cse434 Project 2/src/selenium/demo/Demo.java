@@ -12,7 +12,7 @@ public class Demo {
 		WebDriver driver = new ChromeDriver();             
 		driver.get("http://www.automationpractice.com/");
 		driver.manage().window().maximize();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		String title = driver.getTitle();
 		System.out.println(title);
 		
@@ -28,9 +28,15 @@ public class Demo {
 		
 		System.out.println(driver.getCurrentUrl());
 		
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("roybarun36@gmail.com");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
 		Thread.sleep(2000);
 		driver.close();
 		
