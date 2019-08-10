@@ -1,5 +1,6 @@
 package selenium.demo;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -27,6 +28,9 @@ public class Demo {
 		
 		System.out.println(driver.getCurrentUrl());
 		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
 		Thread.sleep(2000);
 		driver.close();
 		
