@@ -1,6 +1,5 @@
 package selenium.demo;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,6 +14,19 @@ public class Demo {
 		Thread.sleep(2000);
 		String title = driver.getTitle();
 		System.out.println(title);
+		
+		//Validation point of title//
+		
+		if(title.equals("My Store")) {
+			System.out.println("Correct Title");
+		}
+		
+		else {
+			System.out.println("Incorrect Title");
+		}
+		
+		System.out.println(driver.getCurrentUrl());
+		
 		Thread.sleep(2000);
 		driver.close();
 		
