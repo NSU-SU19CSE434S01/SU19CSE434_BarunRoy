@@ -36,9 +36,23 @@ public class Demo {
 		driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("roybarun36@gmail.com");
 		Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
-		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
+		//Thread.sleep(2000);
+	
+		
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("test");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("test");
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"SubmitLogin\"]/span")).click();
+		Thread.sleep(4000);
+		
+		
 		driver.close();
+		
+		
 		
 
 	}
