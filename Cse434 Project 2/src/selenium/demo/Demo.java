@@ -39,6 +39,9 @@ public class Demo {
 		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
 		Thread.sleep(500);
 		
+		driver.findElement(By.cssSelector("#id_gender1")).click();
+		Thread.sleep(4000);
+		
 		driver.close();
 		
 		
