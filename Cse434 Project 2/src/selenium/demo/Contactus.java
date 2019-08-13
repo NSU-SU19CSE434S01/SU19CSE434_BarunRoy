@@ -30,10 +30,14 @@ public class Contactus {
 		
 		driver.findElement(By.xpath("//*[@id=\"message\"]")).sendKeys("Average Service");
 		
+		driver.findElement(By.xpath("//*[@id=\"fileUpload\"]")).sendKeys("F:\\Test Selenium\\Assignment Cover Page.docx");   //Uploads file from the Operating System//
+		Thread.sleep(2000);
+		
+		
 		driver.findElement(By.xpath("//*[@id=\"submitMessage\"]/span")).click();
 		
 	
-		driver.get("http://www.automationpractice.com/");
+		driver.findElement(By.xpath("//*[@id=\"columns\"]/div[1]/a/i")).click();     //By clicking this button it returns to the home page//
 		
 		
 		Thread.sleep(4000);
