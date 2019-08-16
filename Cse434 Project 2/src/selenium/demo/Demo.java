@@ -3,6 +3,7 @@ package selenium.demo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Demo {
 
@@ -37,10 +38,59 @@ public class Demo {
 		Thread.sleep(500);
 		
 		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
-		Thread.sleep(500);
 		
-		driver.findElement(By.cssSelector("#id_gender1")).click();
-		Thread.sleep(4000);
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"customer_firstname\"]")).sendKeys("Barun");
+		
+		driver.findElement(By.xpath("//*[@id=\"customer_lastname\"]")).sendKeys("Roy");
+		
+		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("BRBR12");
+		
+		
+		//handle drop box
+		Select select1 = new Select(driver.findElement(By.id("days")));
+		select1.selectByVisibleText("12");
+		
+		Select select2 = new Select(driver.findElement(By.id("months")));
+		select2.selectByVisibleText("August");
+		
+		Select select3 = new Select(driver.findElement(By.id("years")));
+		select3.selectByVisibleText("1996");
+		
+        
+		driver.findElement(By.xpath("//*[@id=\"firstname\"]")).sendKeys("ABC");
+		
+		driver.findElement(By.xpath("//*[@id=\"lastname\"]")).sendKeys("XYZ");
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"address1\"]")).sendKeys("32,Lake Circus,Kalabagan");
+		
+		driver.findElement(By.xpath("//*[@id=\"city\"]")).sendKeys("Dhaka");
+		
+		
+		Select select4 = new Select(driver.findElement(By.id("id_state")));
+		select4.selectByVisibleText("New York");
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"postcode\"]")).sendKeys("1205");
+		
+		
+		Select select5 = new Select(driver.findElement(By.id("id_country")));
+		select5.selectByVisibleText("United States");
+		
+		
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"phone_mobile\"]")).sendKeys("01684919588");
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"alias\"]")).sendKeys("25,Khulna");
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"submitAccount\"]/span")).click();
+		Thread.sleep(1000);
+		
 		
 		driver.close();
 		
