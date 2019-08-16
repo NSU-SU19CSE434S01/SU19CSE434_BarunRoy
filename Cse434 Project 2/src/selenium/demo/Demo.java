@@ -1,7 +1,11 @@
 package selenium.demo;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -12,8 +16,14 @@ public class Demo {
 		System.setProperty("webdriver.chrome.driver","C:\\Selinium 2\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();             
 		driver.get("http://www.automationpractice.com/");
+		
 		driver.manage().window().maximize();
-		Thread.sleep(500);
+		driver.manage().deleteAllCookies();
+		
+		driver.manage().timeouts().pageLoadTimeout(400, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		
+		
 		String title = driver.getTitle();
 		System.out.println(title);
 		
@@ -29,7 +39,7 @@ public class Demo {
 		
 		System.out.println(driver.getCurrentUrl());
 		
-		Thread.sleep(500);
+		
 		
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
 		Thread.sleep(500);
@@ -40,37 +50,59 @@ public class Demo {
 		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
 		
 		
+		List<WebElement> radio=driver.findElements(By.xpath("//input[@name='id_gender' and @type='radio']"));
 		
-		driver.findElement(By.xpath("//*[@id=\"customer_firstname\"]")).sendKeys("Barun");
+		for(int i=0;i<radio.size();i++)
+		{
+			WebElement local_radio = radio.get(i);
+			
+			String value = local_radio.getAttribute("value");
+			
+			System.out.println("Values from radio buttons are=====>>>>>"+value);
+			
+			if(value.equalsIgnoreCase("1"))
+			{
+				local_radio.click();
+			}
+			
+			
+		}
+		
+		
+		 
+		
+		driver.findElement(By.cssSelector("#customer_firstname")).sendKeys("Barun");
 		
 		driver.findElement(By.xpath("//*[@id=\"customer_lastname\"]")).sendKeys("Roy");
 		
+		
 		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("BRBR12");
 		
+		driver.manage().timeouts().pageLoadTimeout(400, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 		
-		//handle drop box
-		Select select1 = new Select(driver.findElement(By.id("days")));
-		select1.selectByVisibleText("12");
+		Select select0 = new Select(driver.findElement(By.id("days")));
+		select0.selectByVisibleText("1");
 		
 		Select select2 = new Select(driver.findElement(By.id("months")));
-		select2.selectByVisibleText("August");
+		select2.selectByVisibleText("January");
 		
 		Select select3 = new Select(driver.findElement(By.id("years")));
-		select3.selectByVisibleText("1996");
+		select3.selectByVisibleText("2019");
 		
-        
+        /*
 		driver.findElement(By.xpath("//*[@id=\"firstname\"]")).sendKeys("ABC");
 		
 		driver.findElement(By.xpath("//*[@id=\"lastname\"]")).sendKeys("XYZ");
+		*/
 		
+		driver.findElement(By.xpath("//*[@id=\"address1\"]")).sendKeys("Lake Circus,1222,Kalabagan");
 		
-		driver.findElement(By.xpath("//*[@id=\"address1\"]")).sendKeys("32,Lake Circus,Kalabagan");
-		
-		driver.findElement(By.xpath("//*[@id=\"city\"]")).sendKeys("Dhaka");
+		driver.findElement(By.xpath("//*[@id=\"city\"]")).sendKeys("Butte");
 		
 		
 		Select select4 = new Select(driver.findElement(By.id("id_state")));
-		select4.selectByVisibleText("New York");
+		select4.selectByVisibleText("Alabama");
 		
 		
 		driver.findElement(By.xpath("//*[@id=\"postcode\"]")).sendKeys("1205");
@@ -89,7 +121,7 @@ public class Demo {
 		
 		
 		driver.findElement(By.xpath("//*[@id=\"submitAccount\"]/span")).click();
-		Thread.sleep(1000);
+		
 		
 		
 		driver.close();
