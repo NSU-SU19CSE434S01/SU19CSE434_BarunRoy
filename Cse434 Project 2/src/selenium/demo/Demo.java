@@ -20,8 +20,8 @@ public class Demo {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		
-		driver.manage().timeouts().pageLoadTimeout(400, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		
 		String title = driver.getTitle();
@@ -78,14 +78,17 @@ public class Demo {
 		
 		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("BRBR12");
 		
-		driver.manage().timeouts().pageLoadTimeout(400, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 		
 		Select select0 = new Select(driver.findElement(By.id("days")));
 		select0.selectByVisibleText("1");
 		
+		Thread.sleep(3000);
+		
 		Select select2 = new Select(driver.findElement(By.id("months")));
 		select2.selectByVisibleText("January");
+		
+		Thread.sleep(3000);
 		
 		Select select3 = new Select(driver.findElement(By.id("years")));
 		select3.selectByVisibleText("2019");
@@ -95,6 +98,8 @@ public class Demo {
 		
 		driver.findElement(By.xpath("//*[@id=\"lastname\"]")).sendKeys("XYZ");
 		*/
+		
+		driver.findElement(By.id("company")).sendKeys("New Maitree");
 		
 		driver.findElement(By.xpath("//*[@id=\"address1\"]")).sendKeys("Lake Circus,1222,Kalabagan");
 		
