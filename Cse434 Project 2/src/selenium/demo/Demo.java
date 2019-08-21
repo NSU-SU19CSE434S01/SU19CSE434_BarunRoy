@@ -44,7 +44,7 @@ public class Demo {
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
 		Thread.sleep(500);
 		
-		driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("roybarun36@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("roy.barun@northsouth.edu");
 		Thread.sleep(500);
 		
 		driver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
@@ -78,17 +78,17 @@ public class Demo {
 		
 		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("BRBR12");
 		
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		Select select0 = new Select(driver.findElement(By.id("days")));
 		select0.selectByVisibleText("1");
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		Select select2 = new Select(driver.findElement(By.id("months")));
 		select2.selectByVisibleText("January");
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		Select select3 = new Select(driver.findElement(By.id("years")));
 		select3.selectByVisibleText("2019");
@@ -100,33 +100,35 @@ public class Demo {
 		*/
 		
 		driver.findElement(By.id("company")).sendKeys("New Maitree");
+		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//*[@id=\"address1\"]")).sendKeys("Lake Circus,1222,Kalabagan");
+		driver.findElement(By.xpath("//*[@id=\"address1\"]")).sendKeys("31,Lake,Circus,Kalabagan");
+		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//*[@id=\"city\"]")).sendKeys("Butte");
-		
+		Thread.sleep(2000);
 		
 		Select select4 = new Select(driver.findElement(By.id("id_state")));
 		select4.selectByVisibleText("Alabama");
+		Thread.sleep(2000);
 		
-		
-		driver.findElement(By.xpath("//*[@id=\"postcode\"]")).sendKeys("1205");
-		
+		driver.findElement(By.xpath("//*[@id=\"postcode\"]")).sendKeys("12055");
+		Thread.sleep(2000);
 		
 		Select select5 = new Select(driver.findElement(By.id("id_country")));
 		select5.selectByVisibleText("United States");
+		Thread.sleep(2000);
 		
 		
 		
+		driver.findElement(By.xpath("//*[@id=\"phone_mobile\"]")).sendKeys("01684919582");
+		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//*[@id=\"phone_mobile\"]")).sendKeys("01684919588");
-		
-		
-		driver.findElement(By.xpath("//*[@id=\"alias\"]")).sendKeys("25,Khulna");
-		
+		driver.findElement(By.xpath("//*[@id=\"alias\"]")).sendKeys("25,Barisal");
+		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//*[@id=\"submitAccount\"]/span")).click();
-		
+		Thread.sleep(2000);
 		
 		
 		driver.close();
