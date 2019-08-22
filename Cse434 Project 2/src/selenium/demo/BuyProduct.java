@@ -33,6 +33,13 @@ public class BuyProduct {
 		
 		Thread.sleep(1000);
 		
+        Actions action1 = new Actions(driver);
+		
+		action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		
 		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();
 		
 		Thread.sleep(5000);
@@ -40,5 +47,7 @@ public class BuyProduct {
 		driver.close();
 
 	}
+	
+	
 
 }
