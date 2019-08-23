@@ -68,6 +68,10 @@ public class BuyProduct {
 		
 		Thread.sleep(2000);
 		
+        driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/button/span")).click();
+		
+		Thread.sleep(2000);
+		
 		
 		driver.close();
 
