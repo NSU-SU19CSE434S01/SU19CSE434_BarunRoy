@@ -80,8 +80,13 @@ public class BuyProduct {
 		
 		Thread.sleep(2000);
 		
+        driver.findElement(By.xpath("//*[@id=\"HOOK_PAYMENT\"]/div[2]/div/p/a/span")).click();
 		
+		Thread.sleep(2000);
 		
+        driver.findElement(By.xpath("//*[@id=\"cart_navigation\"]/button/span")).click();
+		
+		Thread.sleep(5000);
 		
 		
 		driver.close();
