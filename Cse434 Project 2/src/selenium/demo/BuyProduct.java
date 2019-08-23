@@ -40,9 +40,13 @@ public class BuyProduct {
 		Thread.sleep(1000);
 		
 		
-		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();  //clicks add to cart button//
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")).click();  //clicks proceed to checkout button//
+		
+		Thread.sleep(2000);
 		
 		driver.close();
 
