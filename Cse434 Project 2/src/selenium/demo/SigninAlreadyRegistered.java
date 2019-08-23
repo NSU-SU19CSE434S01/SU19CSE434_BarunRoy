@@ -15,10 +15,10 @@ public class SigninAlreadyRegistered {
 		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
 		Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("test");
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("roybarun36@gmail.com");
 		Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("test");
+		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("testtest");
 		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//*[@id=\"SubmitLogin\"]/span")).click();
