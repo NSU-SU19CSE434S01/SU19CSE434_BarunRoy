@@ -72,6 +72,17 @@ public class BuyProduct {
 		
 		Thread.sleep(2000);
 		
+        driver.findElement(By.xpath("//*[@id=\"cgv\"]")).click();
+		
+		Thread.sleep(2000);
+		
+        driver.findElement(By.xpath("//*[@id=\"form\"]/p/button/span")).click();
+		
+		Thread.sleep(2000);
+		
+		
+		
+		
 		
 		driver.close();
 
