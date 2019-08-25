@@ -13,7 +13,7 @@ public class Demo {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver","C:\\Selinium 2\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();             
 		driver.get("http://www.automationpractice.com/");
 		
@@ -99,6 +99,7 @@ public class Demo {
 		driver.findElement(By.xpath("//*[@id=\"lastname\"]")).sendKeys("XYZ");
 		*/
 		
+		
 		driver.findElement(By.id("company")).sendKeys("New Maitree");
 		Thread.sleep(2000);
 		
@@ -129,6 +130,8 @@ public class Demo {
 		
 		driver.findElement(By.xpath("//*[@id=\"submitAccount\"]/span")).click();
 		Thread.sleep(2000);
+		
+		
 		
 		
 		driver.close();

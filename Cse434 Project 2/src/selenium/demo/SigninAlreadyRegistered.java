@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SigninAlreadyRegistered {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:\\Selinium 2\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();             
 		driver.get("http://www.automationpractice.com/");
 		driver.manage().window().maximize();
