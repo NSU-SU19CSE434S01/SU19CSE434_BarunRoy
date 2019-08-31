@@ -18,7 +18,7 @@ WebDriver driver;
 	@BeforeMethod
 	public void setUp() {
 		
-		System.setProperty("webdriver.chrome.driver","C:\\Selinium 2\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -28,18 +28,19 @@ WebDriver driver;
 	}
 	
 	
-	
+  	
   @Test
   public void automationTitleTest() {
 	    
-	  String title = driver.getTitle();
+	  String title = driver.getCurrentUrl();
 		System.out.println(title);
 		
-		Assert.assertEquals(title,"My Store");
+		//Assert.assertEquals(title,"My Store");
 	
   }
   
   /*
+  @Test
   public void automationlogoTest() {
 	  boolean b = driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img")).isDisplayed();
 	  
@@ -48,7 +49,7 @@ WebDriver driver;
   
   @AfterMethod
   public void teardown() {
-	  driver.close();
+	  driver.quit();
   }
   
 
