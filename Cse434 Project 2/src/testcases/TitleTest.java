@@ -19,12 +19,12 @@ WebDriver driver;
 	public void setUp() {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://www.automationpractice.com/");
+		driver.get("http://www.automationpractice.com/index.php");
 	}
 	
 	
@@ -32,20 +32,20 @@ WebDriver driver;
   @Test
   public void automationTitleTest() {
 	    
-	  String title = driver.getCurrentUrl();
+	  String title = driver.getTitle();
 		System.out.println(title);
 		
-		//Assert.assertEquals(title,"My Store");
+		Assert.assertEquals(title,"My Store");
 	
   }
   
-  /*
+  
   @Test
   public void automationlogoTest() {
 	  boolean b = driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img")).isDisplayed();
 	  
   }
-  */
+  
   
   @AfterMethod
   public void teardown() {
