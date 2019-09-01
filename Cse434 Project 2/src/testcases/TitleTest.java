@@ -45,7 +45,8 @@ WebDriver driver;
 	}
 	
 	
-  
+	
+	
   @Test(priority=1)
   public void automationTitleTest() {
 	    
@@ -111,7 +112,7 @@ WebDriver driver;
   
   
   
-  @Test(priority=1)
+  @Test(priority=5)
   public void removefromcartTest() throws InterruptedException {
 	  
 	    Actions action = new Actions(driver);
@@ -148,6 +149,47 @@ WebDriver driver;
 		
 		
   }
+  
+  
+  @Test(priority=6)
+  public void productdeliveryaddressTest() throws InterruptedException {
+	  
+	    Actions action = new Actions(driver);
+		
+		action.moveToElement(driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/ul/li[3]/a")).click();
+		
+		Thread.sleep(1000);
+		
+        Actions action1 = new Actions(driver);
+		
+		action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();  //clicks on add to cart button//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")).click();  //clicks on proceed to checkout button 1st time//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/p[2]/a[1]/span")).click();
+		
+		Thread.sleep(2000);
+		
+		
+		String extracted = driver.findElement(By.xpath("//*[@id=\"address_delivery\"]/li[3]")).getText();
+		String pattern   = "32,Lake,Circus,Kalabagan";
+		Assert.assertEquals(extracted,pattern);
+		
+		
+  }
+		
 
   
   
