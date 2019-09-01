@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -28,8 +29,8 @@ WebDriver driver;
 	}
 	
 	
-  	
-  @Test
+  
+  @Test(priority=1)
   public void automationTitleTest() {
 	    
 	  String title = driver.getTitle();
@@ -40,11 +41,58 @@ WebDriver driver;
   }
   
   
-  @Test
+  @Test(priority=2)
   public void automationlogoTest() {
 	  boolean b = driver.findElement(By.xpath("//*[@id=\"header_logo\"]/a/img")).isDisplayed();
+	  Assert.assertTrue(b);
 	  
   }
+  
+  
+  @Test(priority=3)
+  public void signinTest() {
+	  boolean c = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).isDisplayed();
+	  Assert.assertTrue(c);
+  }
+  
+  
+  
+  @Test(priority=4)
+  public void addtocartTest() throws InterruptedException {
+	  
+	    Actions action = new Actions(driver);
+		
+		action.moveToElement(driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/ul/li[3]/a")).click();
+		
+		Thread.sleep(1000);
+		
+        Actions action1 = new Actions(driver);
+		
+		action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();  //clicks on add to cart button//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")).click();  //clicks on proceed to checkout button 1st time//
+		
+		Thread.sleep(2000);
+		
+
+		String extracted = driver.findElement(By.xpath("//*[@id=\"summary_products_quantity\"]")).getText();
+		String pattern   = "1 Product";
+		Assert.assertEquals(extracted,pattern);
+	  
+	  
+  }
+  
+  
   
   
   @AfterMethod
