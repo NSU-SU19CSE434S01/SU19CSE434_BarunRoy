@@ -17,7 +17,7 @@ public class TitleTest {
 WebDriver driver;
 	
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -26,6 +26,22 @@ WebDriver driver;
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://www.automationpractice.com/index.php");
+		
+		driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
+		
+		Thread.sleep(500);
+		
+        driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("roybarun36@gmail.com");
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"passwd\"]")).sendKeys("testtest");
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"SubmitLogin\"]/span")).click();
+		
+		Thread.sleep(1000);
 	}
 	
 	
@@ -36,7 +52,7 @@ WebDriver driver;
 	  String title = driver.getTitle();
 		System.out.println(title);
 		
-		Assert.assertEquals(title,"My Store");
+		Assert.assertEquals(title,"My account - My Store");
 	
   }
   
@@ -91,6 +107,48 @@ WebDriver driver;
 	  
 	  
   }
+  
+  
+  
+  
+  @Test(priority=1)
+  public void removefromcartTest() throws InterruptedException {
+	  
+	    Actions action = new Actions(driver);
+		
+		action.moveToElement(driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/ul/li[3]/a")).click();
+		
+		Thread.sleep(1000);
+		
+        Actions action1 = new Actions(driver);
+		
+		action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();  //clicks on add to cart button//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")).click();  //clicks on proceed to checkout button 1st time//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"5_19_0_204834\"]/i")).click();
+		
+		Thread.sleep(2000);
+		
+		String extracted = driver.findElement(By.xpath("//*[@id=\"center_column\"]/p")).getText();
+		String pattern   = "Your shopping cart is empty.";
+		Assert.assertEquals(extracted,pattern);
+		
+		
+  }
+
   
   
   

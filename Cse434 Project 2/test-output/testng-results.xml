@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29525" started-at="2019-09-02T00:00:35 BDT" finished-at="2019-09-02T00:01:04 BDT">
+  <suite name="Default suite" duration-ms="37129" started-at="2019-09-02T02:24:07 BDT" finished-at="2019-09-02T02:24:44 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29525" started-at="2019-09-02T00:00:35 BDT" finished-at="2019-09-02T00:01:04 BDT">
+    <test name="Default test" duration-ms="37129" started-at="2019-09-02T02:24:07 BDT" finished-at="2019-09-02T02:24:44 BDT">
       <class name="testcases.TitleTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="setUp" is-config="true" duration-ms="15112" started-at="2019-09-02T00:00:35 BDT" finished-at="2019-09-02T00:00:50 BDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="setUp" is-config="true" duration-ms="21049" started-at="2019-09-02T02:24:07 BDT" finished-at="2019-09-02T02:24:28 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addtocartTest()[pri:4, instance:testcases.TitleTest@4bb4de6a]" name="addtocartTest" duration-ms="13767" started-at="2019-09-02T00:00:50 BDT" finished-at="2019-09-02T00:01:04 BDT">
+        <test-method status="PASS" signature="removefromcartTest()[pri:1, instance:testcases.TitleTest@4bb4de6a]" name="removefromcartTest" duration-ms="15437" started-at="2019-09-02T02:24:28 BDT" finished-at="2019-09-02T02:24:44 BDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addtocartTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="teardown" is-config="true" duration-ms="621" started-at="2019-09-02T00:01:04 BDT" finished-at="2019-09-02T00:01:04 BDT">
+        </test-method> <!-- removefromcartTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="teardown" is-config="true" duration-ms="617" started-at="2019-09-02T02:24:44 BDT" finished-at="2019-09-02T02:24:44 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

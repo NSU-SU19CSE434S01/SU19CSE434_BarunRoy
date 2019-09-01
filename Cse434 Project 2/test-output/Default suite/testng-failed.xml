@@ -6,8 +6,8 @@
       <class name="testcases.TitleTest">
         <methods>
           <include name="teardown"/>
-          <include name="addtocartTest"/>
           <include name="setUp"/>
+          <include name="removefromcartTest"/>
         </methods>
       </class> <!-- testcases.TitleTest -->
     </classes>
