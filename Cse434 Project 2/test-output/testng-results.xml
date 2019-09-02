@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38969" started-at="2019-09-02T03:12:32 BDT" finished-at="2019-09-02T03:13:11 BDT">
+  <suite name="Default suite" duration-ms="50488" started-at="2019-09-02T14:19:29 BDT" finished-at="2019-09-02T14:20:19 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38969" started-at="2019-09-02T03:12:32 BDT" finished-at="2019-09-02T03:13:11 BDT">
+    <test name="Default test" duration-ms="50488" started-at="2019-09-02T14:19:29 BDT" finished-at="2019-09-02T14:20:19 BDT">
       <class name="testcases.TitleTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="setUp" is-config="true" duration-ms="20592" started-at="2019-09-02T03:12:32 BDT" finished-at="2019-09-02T03:12:52 BDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="setUp" is-config="true" duration-ms="26267" started-at="2019-09-02T14:19:29 BDT" finished-at="2019-09-02T14:19:55 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="productdeliveryaddressTest()[pri:1, instance:testcases.TitleTest@4bb4de6a]" name="productdeliveryaddressTest" duration-ms="17725" started-at="2019-09-02T03:12:52 BDT" finished-at="2019-09-02T03:13:10 BDT">
+        <test-method status="PASS" signature="productshippingTest()[pri:1, instance:testcases.TitleTest@4bb4de6a]" name="productshippingTest" duration-ms="23490" started-at="2019-09-02T14:19:55 BDT" finished-at="2019-09-02T14:20:18 BDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productdeliveryaddressTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="teardown" is-config="true" duration-ms="626" started-at="2019-09-02T03:13:10 BDT" finished-at="2019-09-02T03:13:11 BDT">
+        </test-method> <!-- productshippingTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="teardown" is-config="true" duration-ms="667" started-at="2019-09-02T14:20:18 BDT" finished-at="2019-09-02T14:20:19 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

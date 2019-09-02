@@ -178,7 +178,7 @@ WebDriver driver;
 		
 		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//*[@id=\"center_column\"]/p[2]/a[1]/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/p[2]/a[1]/span")).click();          //clicks on proceed to checkout button 2nd time//
 		
 		Thread.sleep(2000);
 		
@@ -189,6 +189,58 @@ WebDriver driver;
 		
 		
   }
+  
+  
+  
+  
+  @Test(priority=7)
+  public void productshippingTest() throws InterruptedException {
+	  
+	    Actions action = new Actions(driver);
+		
+		action.moveToElement(driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/ul/li[3]/a")).click();
+		
+		Thread.sleep(1000);
+		
+        Actions action1 = new Actions(driver);
+		
+		action1.moveToElement(driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div/a[1]/img"))).build().perform();
+		
+		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span")).click();  //clicks on add to cart button//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a/span")).click();  //clicks on proceed to checkout button 1st time//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/p[2]/a[1]/span")).click();          //clicks on proceed to checkout button 2nd time//
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"center_column\"]/form/p/button/span")).click();          //clicks on proceed to checkout button 3rd time//
+		
+		Thread.sleep(2000);
+		
+        driver.findElement(By.xpath("//*[@id=\"cgv\"]")).click();
+		
+		Thread.sleep(2000);
+		
+		
+		String extracted = driver.findElement(By.xpath("//*[@id=\"form\"]/div/div[2]/div[1]/div/div/table/tbody/tr/td[3]/strong")).getText();
+		String pattern   = "My carrier";
+		Assert.assertEquals(extracted,pattern);
+		
+		
+		
+  }
+		
 		
 
   
