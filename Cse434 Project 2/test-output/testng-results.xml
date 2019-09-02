@@ -1,21 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64460" started-at="2019-09-02T18:55:15 BDT" finished-at="2019-09-02T18:56:20 BDT">
+  <suite name="Default suite" duration-ms="341947" started-at="2019-09-02T20:14:10 BDT" finished-at="2019-09-02T20:19:52 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="64460" started-at="2019-09-02T18:55:15 BDT" finished-at="2019-09-02T18:56:20 BDT">
+    <test name="Default test" duration-ms="341947" started-at="2019-09-02T20:14:10 BDT" finished-at="2019-09-02T20:19:52 BDT">
       <class name="testcases.TitleTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="setUp" is-config="true" duration-ms="33351" started-at="2019-09-02T18:55:15 BDT" finished-at="2019-09-02T18:55:48 BDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="21273" started-at="2019-09-02T20:14:10 BDT" finished-at="2019-09-02T20:14:31 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="productpaymentTest()[pri:1, instance:testcases.TitleTest@4bb4de6a]" name="productpaymentTest" duration-ms="30416" started-at="2019-09-02T18:55:48 BDT" finished-at="2019-09-02T18:56:19 BDT">
+        <test-method status="PASS" signature="automationTitleTest()[pri:1, instance:testcases.TitleTest@2f8f5f62]" name="automationTitleTest" duration-ms="50" started-at="2019-09-02T20:14:31 BDT" finished-at="2019-09-02T20:14:31 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- automationTitleTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="634" started-at="2019-09-02T20:14:31 BDT" finished-at="2019-09-02T20:14:32 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="20593" started-at="2019-09-02T20:14:32 BDT" finished-at="2019-09-02T20:14:52 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="automationlogoTest()[pri:2, instance:testcases.TitleTest@2f8f5f62]" name="automationlogoTest" duration-ms="235" started-at="2019-09-02T20:14:52 BDT" finished-at="2019-09-02T20:14:53 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- automationlogoTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="615" started-at="2019-09-02T20:14:53 BDT" finished-at="2019-09-02T20:14:53 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="21575" started-at="2019-09-02T20:14:53 BDT" finished-at="2019-09-02T20:15:15 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signinTest()[pri:3, instance:testcases.TitleTest@2f8f5f62]" name="signinTest" duration-ms="105" started-at="2019-09-02T20:15:15 BDT" finished-at="2019-09-02T20:15:15 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signinTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="606" started-at="2019-09-02T20:15:15 BDT" finished-at="2019-09-02T20:15:16 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="21113" started-at="2019-09-02T20:15:16 BDT" finished-at="2019-09-02T20:15:37 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addtocartTest()[pri:4, instance:testcases.TitleTest@2f8f5f62]" name="addtocartTest" duration-ms="14028" started-at="2019-09-02T20:15:37 BDT" finished-at="2019-09-02T20:15:51 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addtocartTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="612" started-at="2019-09-02T20:15:51 BDT" finished-at="2019-09-02T20:15:51 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="22728" started-at="2019-09-02T20:15:51 BDT" finished-at="2019-09-02T20:16:14 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="removefromcartTest()[pri:5, instance:testcases.TitleTest@2f8f5f62]" name="removefromcartTest" duration-ms="17248" started-at="2019-09-02T20:16:14 BDT" finished-at="2019-09-02T20:16:31 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removefromcartTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="605" started-at="2019-09-02T20:16:31 BDT" finished-at="2019-09-02T20:16:32 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="20754" started-at="2019-09-02T20:16:32 BDT" finished-at="2019-09-02T20:16:53 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="productdeliveryaddressTest()[pri:6, instance:testcases.TitleTest@2f8f5f62]" name="productdeliveryaddressTest" duration-ms="18399" started-at="2019-09-02T20:16:53 BDT" finished-at="2019-09-02T20:17:11 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productdeliveryaddressTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="621" started-at="2019-09-02T20:17:11 BDT" finished-at="2019-09-02T20:17:12 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="20012" started-at="2019-09-02T20:17:12 BDT" finished-at="2019-09-02T20:17:32 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="productshippingTest()[pri:7, instance:testcases.TitleTest@2f8f5f62]" name="productshippingTest" duration-ms="24170" started-at="2019-09-02T20:17:32 BDT" finished-at="2019-09-02T20:17:56 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productshippingTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="603" started-at="2019-09-02T20:17:56 BDT" finished-at="2019-09-02T20:17:56 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="20671" started-at="2019-09-02T20:17:56 BDT" finished-at="2019-09-02T20:18:17 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="productpaymentTest()[pri:8, instance:testcases.TitleTest@2f8f5f62]" name="productpaymentTest" duration-ms="33150" started-at="2019-09-02T20:18:17 BDT" finished-at="2019-09-02T20:18:50 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productpaymentTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@4bb4de6a]" name="teardown" is-config="true" duration-ms="630" started-at="2019-09-02T18:56:19 BDT" finished-at="2019-09-02T18:56:20 BDT">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="633" started-at="2019-09-02T20:18:50 BDT" finished-at="2019-09-02T20:18:51 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="setUp" is-config="true" duration-ms="21151" started-at="2019-09-02T20:18:51 BDT" finished-at="2019-09-02T20:19:12 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="confirmmyorderTest()[pri:9, instance:testcases.TitleTest@2f8f5f62]" name="confirmmyorderTest" duration-ms="39087" started-at="2019-09-02T20:19:12 BDT" finished-at="2019-09-02T20:19:51 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confirmmyorderTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TitleTest@2f8f5f62]" name="teardown" is-config="true" duration-ms="619" started-at="2019-09-02T20:19:51 BDT" finished-at="2019-09-02T20:19:52 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
