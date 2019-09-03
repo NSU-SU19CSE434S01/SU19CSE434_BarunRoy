@@ -35,12 +35,16 @@ This is project 2 Report
 
 
 
+
+
 **Description:**
 
 In this project I performed automated functional testing on a website naming http://automationpractice.com/index.php using selenium server - 3.9.1. This website is an e-commerce website where they sell all kinds of female dresses and shoes. I tested the title, logo, sign in, contact us and the full buying process of a product that is summary, address, shipping and payment.
 
 
-**Snapshots of Featues Tested:**
+
+
+**Snapshots of Features Tested:**
 
 <p align="center">
 <img src="https://github.com/BarunRoy1521257042/CSE434/blob/master/Cse434%20Project%202/Snapshots%20of%20features%20Tested/Features%20tested%20on%20the%20homepage.png">
@@ -85,6 +89,8 @@ In this project I performed automated functional testing on a website naming htt
 <div align="center">
 
 
+
+
 **Packages used:**
 
 1) Selenium-server-3.9.1
@@ -92,6 +98,8 @@ In this project I performed automated functional testing on a website naming htt
 3) Chromedriver_win32
 4) Eclipse-Java 2019-06
 5) TestNG
+
+
 
 
 **How different parts of the website is tested:**
